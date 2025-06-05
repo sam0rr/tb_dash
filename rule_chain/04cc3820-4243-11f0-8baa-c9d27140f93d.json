@@ -144,7 +144,7 @@
         "orderBy" : "ASC",
         "limit" : 1000,
         "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "3600000",
+        "startIntervalPattern" : "86400000",
         "endIntervalPattern" : "0",
         "startInterval" : 1,
         "startIntervalTimeUnit" : "DAYS",
