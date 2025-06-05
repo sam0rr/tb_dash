@@ -1,0 +1,477 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "daily_csv_notification (generate a csv each 24 hours + send via teams)"
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : null,
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "04cc3820-4243-11f0-8baa-c9d27140f93d"
+    },
+    "name" : "daily_csv_notification",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 5,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "False"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 7,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 8,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 9,
+      "type" : "Failure"
+    } ],
+    "firstNodeIndex" : null,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "Generate Each Day Data For the Csv",
+        "layoutX" : 89,
+        "layoutY" : 637
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 86400,
+        "scriptLang" : "JS",
+        "jsScript" : "var msg = { trigger: \"daily_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : "var msg = { trigger: \"daily_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "originatorId" : "f1c09860-40b3-11f0-b971-355c7b7ccee6",
+        "originatorType" : "ENTITY_GROUP"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "201e5200-4245-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Daily Timer",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Check daily trigger For Csv",
+        "layoutX" : 427,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if (msg.trigger === \"daily_csv\") {\n    return { msg: msg, metadata: metadata, msgType: msgType };\n}\nreturn null;\n",
+        "tbelScript" : "if (msg.trigger === \"daily_csv\") {\n    return { msg: msg, metadata: metadata, msgType: msgType };\n}\nreturn null;\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4eb64f40-4246-11f0-8baa-c9d27140f93d"
+      },
+      "name" : "Check daily trigger",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Fetch last 24h telemetry For All Devices",
+        "layoutX" : 762,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "Temp1, Temp2, defr, fans, refr, dig1, dig2" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "ALL",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : true,
+        "startIntervalPattern" : "86400000",
+        "endIntervalPattern" : "0",
+        "startInterval" : 1,
+        "startIntervalTimeUnit" : "DAYS",
+        "endInterval" : 0,
+        "endIntervalTimeUnit" : "DAYS"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb680760-4247-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Fetch last 24h telemetry",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Build Daily Csv For All Devices",
+        "layoutX" : 1111,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var csv = \"timestamp,Temp1,Temp2,defr,fans,refr,dig1,dig2\\n\";\n\nfor (var i = 0; i < msg.length; i++) {\n    var row = msg[i];\n    var ts = row.ts;\n    var vals = row.values;\n\n    csv += [\n        ts,\n        vals.Temp1 ?? \"\",\n        vals.Temp2 ?? \"\",\n        vals.defr ?? \"\",\n        vals.fans ?? \"\",\n        vals.refr ?? \"\",\n        vals.dig1 ?? \"\",\n        vals.dig2 ?? \"\"\n    ].join(\",\") + \"\\n\";\n}\n\nreturn {\n    msg: { csv: csv },\n    metadata: metadata,\n    msgType: \"NOTIFICATION\"\n};\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "eb680761-4247-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Build daily CSV",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log daily CSV\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 1372,
+        "layoutY" : 325
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"\\nCSV content:\\n\" + msg.csv;\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4f375430-4248-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log daily CSV",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log Node \"Generator execution failed\"\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 422,
+        "layoutY" : 761
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Generator failed\\nMessage:\\n\" + JSON.stringify(msg, null, 2) +\n       \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb87580-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log Node \"Generator execution failed\"",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log ignored trigger\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 760,
+        "layoutY" : 681
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Ignored message: trigger was '\" + msg.trigger + \"'\";\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb89c90-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log ignored trigger",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log trigger check failed\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 771,
+        "layoutY" : 842
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Script error in 'Check daily trigger':\\n\" +\n       JSON.stringify(msg, null, 2) +\n       \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb89c91-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log trigger check failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log telemetry fetch failure\nLog telemetry fetch failure\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 1101,
+        "layoutY" : 788
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to fetch telemetry.\\n\" +\n       \"Device: \" + metadata.deviceName + \"\\n\" +\n       \"Message:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb89c92-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log telemetry fetch failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log CSV generation failure\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 1386,
+        "layoutY" : 785
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to build CSV.\\nMessage:\\n\" + JSON.stringify(msg, null, 2) +\n       \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb89c93-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log CSV generation failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log generator success\nLog daily CSV\nLog daily CSV",
+        "layoutX" : 427,
+        "layoutY" : 341
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Generator triggered successfully at \" + new Date(metadata.timestamp).toISOString();\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb8c3a0-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log generator success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log trigger accepted",
+        "layoutX" : 766,
+        "layoutY" : 335
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Trigger accepted: \" + msg.trigger;\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb8c3a1-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log trigger accepted",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log telemetry fetch success\nLog telemetry fetch success\nLog telemetry fetch success\n",
+        "layoutX" : 1108,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Successfully fetched telemetry for: \" + metadata.deviceName +\n       \"\\nNumber of entries: \" + msg.length;\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "afb8c3a2-424a-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log telemetry fetch success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "POST daily CSV report to Teams via webhook",
+        "layoutX" : 1409,
+        "layoutY" : 500
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "http://localhost/api",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : true,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "\tapplication/json"
+        },
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : "1000"
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e9c07840-424f-11f0-9e49-05adc209a747"
+      },
+      "name" : "Send CSV to Teams",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
