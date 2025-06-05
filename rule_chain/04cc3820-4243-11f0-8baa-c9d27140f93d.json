@@ -65,6 +65,18 @@
       "fromIndex" : 3,
       "toIndex" : 9,
       "type" : "Failure"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "Failure"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -184,7 +196,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return \"\\nCSV content:\\n\" + msg.csv;\n",
+        "jsScript" : "return \"CSV preview (truncated):\\n\\n\" + (msg.csv || \"\").substring(0, 500) + \"...\";\n",
         "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
       },
       "configurationVersion" : 0,
@@ -427,8 +439,8 @@
     }, {
       "additionalInfo" : {
         "description" : "POST daily CSV report to Teams via webhook",
-        "layoutX" : 1409,
-        "layoutY" : 500
+        "layoutX" : 1442,
+        "layoutY" : 497
       },
       "configuration" : {
         "restEndpointUrlPattern" : "http://localhost/api",
@@ -466,6 +478,62 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Teams notification sent\nLog daily CSV\nLog Teams notification sent",
+        "layoutX" : 1691,
+        "layoutY" : 321
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Teams notification sent successfully.\";\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8f5821e0-4250-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log Teams notification sent",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Teams notification failed",
+        "layoutX" : 1693,
+        "layoutY" : 780
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Teams notification failed to send.\\n\\nError:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8f5821e1-4250-11f0-add2-093f841cc5dc"
+      },
+      "name" : "Log Teams notification failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     } ],
     "ruleChainConnections" : null
   },
