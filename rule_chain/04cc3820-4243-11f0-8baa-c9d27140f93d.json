@@ -133,18 +133,18 @@
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
-        "description" : "Fetch last 24h telemetry For All Devices",
+        "description" : "Fetch last 24h By 1 Hour Batch telemetry For All Devices",
         "layoutX" : 762,
         "layoutY" : 497
       },
       "configuration" : {
         "latestTsKeyNames" : [ "Temp1, Temp2, defr, fans, refr, dig1, dig2" ],
-        "aggregation" : "NONE",
+        "aggregation" : "AVG",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
         "limit" : 1000,
         "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "86400000",
+        "startIntervalPattern" : "3600000",
         "endIntervalPattern" : "0",
         "startInterval" : 1,
         "startIntervalTimeUnit" : "DAYS",
@@ -159,7 +159,7 @@
         "entityType" : "RULE_NODE",
         "id" : "eb680760-4247-11f0-b94b-f3b14d0c4306"
       },
-      "name" : "Fetch last 24h telemetry",
+      "name" : "Fetch last 24h (By One Hour Batch) telemetry",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
@@ -458,12 +458,12 @@
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
         "headers" : {
-          "Content-Type" : "\tapplication/json"
+          "Content-Type" : "application/json"
         },
         "credentials" : {
           "type" : "anonymous"
         },
-        "maxInMemoryBufferSizeInKb" : "1000"
+        "maxInMemoryBufferSizeInKb" : "25000"
       },
       "configurationVersion" : 3,
       "createdTime" : 0,
