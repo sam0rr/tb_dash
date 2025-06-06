@@ -207,15 +207,14 @@
       },
       "filters" : { },
       "timewindow" : {
-        "displayValue" : "",
         "hideAggregation" : false,
         "hideAggInterval" : false,
         "hideTimezone" : false,
         "selectedTab" : 0,
         "realtime" : {
           "realtimeType" : 0,
-          "interval" : 1000,
-          "timewindowMs" : 60000,
+          "interval" : 1800000,
+          "timewindowMs" : 604800000,
           "quickInterval" : "CURRENT_DAY",
           "hideInterval" : false,
           "hideLastInterval" : false,
@@ -238,7 +237,8 @@
         "aggregation" : {
           "type" : "AVG",
           "limit" : 25000
-        }
+        },
+        "timezone" : null
       },
       "settings" : {
         "stateControllerId" : "entity",
