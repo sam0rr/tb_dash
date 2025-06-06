@@ -554,69 +554,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "Send CSV by Email Daily",
-        "layoutX" : 1605,
-        "layoutY" : 1167
-      },
-      "configuration" : {
-        "useSystemSmtpSettings" : true,
-        "smtpProtocol" : "smtp",
-        "smtpHost" : "localhost",
-        "smtpPort" : 25,
-        "timeout" : 10000,
-        "enableTls" : false,
-        "tlsVersion" : "TLSv1.2",
-        "enableProxy" : false,
-        "proxyHost" : null,
-        "proxyPort" : null,
-        "proxyUser" : null,
-        "proxyPassword" : null,
-        "username" : null,
-        "password" : null
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "71bd4620-4272-11f0-b50e-99d9c8fcd8e7"
-      },
-      "name" : "Send CSV by Email",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "Send Daily CSV by Email",
-        "layoutX" : 1604,
-        "layoutY" : 1298
-      },
-      "configuration" : {
-        "fromTemplate" : "thingsboard@cloud-notifier.com",
-        "toTemplate" : "arseneaults@regethermic.ca",
-        "ccTemplate" : null,
-        "bccTemplate" : null,
-        "subjectTemplate" : "Rapport CSV – ${metadata.timestamp}",
-        "mailBodyType" : "false",
-        "bodyTemplate" : "Bonjour,\n\nVeuillez trouver ci-joint le rapport CSV des dernières 24 heures généré automatiquement.\n\nCordialement,\n\nThingsBoard Cloud"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : null,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "71bd4621-4272-11f0-b50e-99d9c8fcd8e7"
-      },
-      "name" : "Send Daily CSV by Email",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
     } ],
     "ruleChainConnections" : null
   },
