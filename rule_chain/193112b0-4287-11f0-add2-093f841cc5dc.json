@@ -510,7 +510,7 @@
       "additionalInfo" : {
         "description" : "Get file.io link",
         "layoutX" : 1855,
-        "layoutY" : 500
+        "layoutY" : 495
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -592,13 +592,12 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
-        "description" : "UploadCSVToFileIO",
+        "description" : "FileIoClient",
         "layoutX" : 1484,
         "layoutY" : 492
       },
       "configuration" : {
-        "integrationId" : "fb2efe90-4285-11f0-b50e-99d9c8fcd8e7",
-        "body" : "{\n  \"file\": \"${msg.csv}\",\n  \"expires\": \"1w\",\n  \"maxDownloads\": 1,\n  \"autoDelete\": false\n}"
+        "integrationId" : "995a9a90-4289-11f0-add2-093f841cc5dc"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -612,7 +611,7 @@
         "entityType" : "RULE_NODE",
         "id" : "1938b3d7-4287-11f0-9e49-05adc209a747"
       },
-      "name" : "UploadCSVToFileIO",
+      "name" : "FileIoClient",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
