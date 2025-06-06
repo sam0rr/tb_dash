@@ -8,114 +8,6 @@
     "configuration" : {
       "description" : "DailyDashboard for report",
       "widgets" : {
-        "960257b0-2144-eac4-ae22-65eb1a8ea9c1" : {
-          "typeFullFqn" : "system.entity_admin_widgets.asset_admin_table",
-          "type" : "latest",
-          "sizeX" : 7.5,
-          "sizeY" : 6.5,
-          "config" : {
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 86400000,
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1749134022802,
-                  "endTimeMs" : 1749220422802
-                },
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideFixedInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "aggregation" : {
-                "type" : "NONE",
-                "limit" : 200
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "rgb(255, 255, 255)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "4px",
-            "settings" : {
-              "entitiesTitle" : "Daily Report",
-              "enableSearch" : true,
-              "enableSelectColumnDisplay" : true,
-              "enableStickyHeader" : true,
-              "enableStickyAction" : true,
-              "showCellActionsMenu" : true,
-              "reserveSpaceForHiddenAction" : "true",
-              "displayEntityName" : false,
-              "displayEntityLabel" : false,
-              "displayEntityType" : false,
-              "displayPagination" : true,
-              "defaultPageSize" : 10,
-              "defaultSortOrder" : "entityName",
-              "useRowStyleFunction" : false
-            },
-            "title" : "Asset admin table",
-            "dropShadow" : true,
-            "enableFullscreen" : true,
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
-            },
-            "useDashboardTimewindow" : false,
-            "showLegend" : false,
-            "datasources" : [ {
-              "type" : "entity",
-              "name" : "",
-              "entityAliasId" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
-              "dataKeys" : [ {
-                "name" : "name",
-                "type" : "entityField",
-                "label" : "Name",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.46216763801009597
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "showTitleIcon" : false,
-            "titleIcon" : "more_horiz",
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "titleTooltip" : "",
-            "widgetStyle" : { },
-            "displayTimewindow" : true,
-            "actions" : {
-              "headerButton" : [ ],
-              "actionCellButton" : [ ]
-            },
-            "configMode" : "basic",
-            "titleFont" : null,
-            "titleColor" : null,
-            "enableDataExport" : true,
-            "widgetCss" : "",
-            "pageSize" : 100000,
-            "units" : null,
-            "decimals" : 2,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "960257b0-2144-eac4-ae22-65eb1a8ea9c1"
-        },
         "779c53ab-caf4-1691-371b-90a5e3686623" : {
           "typeFullFqn" : "system.cards.timeseries_table",
           "type" : "timeseries",
@@ -126,7 +18,7 @@
           "config" : {
             "datasources" : [ {
               "type" : "entity",
-              "entityAliasId" : "56139a34-8a39-998e-042f-927b122a64b9",
+              "entityAliasId" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
               "dataKeys" : [ {
                 "name" : "defr",
                 "label" : "defr",
@@ -176,17 +68,45 @@
                 "color" : "#8bc34a",
                 "settings" : { },
                 "_hash" : 0.28335272368664943
-              } ]
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
+              "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
               "realtime" : {
+                "realtimeType" : 0,
                 "interval" : 1000,
-                "timewindowMs" : 60000
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1749135884016,
+                  "endTimeMs" : 1749222284016
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
               },
               "aggregation" : {
                 "type" : "NONE",
                 "limit" : 200
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
@@ -195,7 +115,9 @@
             "settings" : {
               "showTimestamp" : true,
               "displayPagination" : true,
-              "defaultPageSize" : 10
+              "defaultPageSize" : 10,
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true
             },
             "title" : "Timeseries table",
             "dropShadow" : true,
@@ -213,7 +135,11 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "24px",
             "displayTimewindow" : true,
-            "configMode" : "basic"
+            "configMode" : "basic",
+            "titleFont" : null,
+            "titleColor" : null,
+            "titleIcon" : null,
+            "enableDataExport" : true
           },
           "id" : "779c53ab-caf4-1691-371b-90a5e3686623"
         }
@@ -225,16 +151,10 @@
           "layouts" : {
             "main" : {
               "widgets" : {
-                "960257b0-2144-eac4-ae22-65eb1a8ea9c1" : {
-                  "sizeX" : 14,
-                  "sizeY" : 13,
-                  "row" : 0,
-                  "col" : 0
-                },
                 "779c53ab-caf4-1691-371b-90a5e3686623" : {
-                  "sizeX" : 8,
-                  "sizeY" : 6,
-                  "row" : 13,
+                  "sizeX" : 18,
+                  "sizeY" : 12,
+                  "row" : 0,
                   "col" : 0
                 }
               },
