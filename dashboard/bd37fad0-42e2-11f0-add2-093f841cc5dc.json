@@ -3,7 +3,7 @@
   "entity" : {
     "title" : "DailyDashboard",
     "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
-    "mobileHide" : true,
+    "mobileHide" : false,
     "mobileOrder" : null,
     "configuration" : {
       "description" : "DailyDashboard for report",
