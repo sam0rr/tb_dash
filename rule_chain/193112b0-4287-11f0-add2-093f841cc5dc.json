@@ -349,7 +349,7 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
-        "description" : "POST 12h CSV report to Teams via webhook",
+        "description" : "POST 12h CSV report to Teams with webhook",
         "layoutX" : 2244,
         "layoutY" : 497
       },
