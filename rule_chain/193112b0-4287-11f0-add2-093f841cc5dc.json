@@ -509,19 +509,19 @@
     }, {
       "additionalInfo" : {
         "description" : "Get file.io link",
-        "layoutX" : 1855,
-        "layoutY" : 495
+        "layoutX" : 1878,
+        "layoutY" : 494
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "function Transform(msg, metadata, msgType) {\r\n    var responseJson;\r\n    try {\r\n        responseJson = JSON.parse(msg.data);\r\n    } catch (e) {\r\n        return {\r\n            msg: { link: \"\" },\r\n            metadata: metadata,\r\n            msgType: \"ERROR\"\r\n        };\r\n    }\r\n    var fileLink = responseJson.link || \"\";\r\n\r\n    return {\r\n        msg: { link: fileLink },\r\n        metadata: metadata,\r\n        msgType: \"NOTIFICATION\"\r\n    };\r\n}\r\n",
+        "jsScript" : "/**\r\n * Transform script to extract the file.io link from the HTTP response.\r\n * It will look first into msg.data, then into metadata['$.body'] (ou metadata['http_response_body']).\r\n */\r\nfunction Transform(msg, metadata, msgType) {\r\n    // 1. Essayer d’extraire la réponse brute depuis msg.data\r\n    var rawResponse = null;\r\n    if (msg.data) {\r\n        rawResponse = msg.data; \r\n    } else if (metadata['$.body']) {\r\n        // Cas commun où ThingsBoard stocke la réponse HTTP dans metadata[\"$.body\"]\r\n        rawResponse = metadata['$.body'];\r\n    } else if (metadata['http_response_body']) {\r\n        // Selon certaines versions, la clé peut s’appeler “http_response_body”\r\n        rawResponse = metadata['http_response_body'];\r\n    }\r\n\r\n    // 2. Si on n’a toujours rien, renvoyer un lien vide\r\n    if (!rawResponse) {\r\n        return {\r\n            msg: { link: \"\" },\r\n            metadata: metadata,\r\n            msgType: \"ERROR\"\r\n        };\r\n    }\r\n\r\n    // 3. Essayer de parser la chaîne JSON\r\n    var responseJson;\r\n    try {\r\n        responseJson = JSON.parse(rawResponse);\r\n    } catch (e) {\r\n        return {\r\n            msg: { link: \"\" },\r\n            metadata: metadata,\r\n            msgType: \"ERROR\"\r\n        };\r\n    }\r\n\r\n    // 4. Récupérer le champ \"link\"\r\n    var fileLink = responseJson.link || \"\";\r\n\r\n    // 5. Renvoyer l’URL dans msg.link\r\n    return {\r\n        msg: { link: fileLink },\r\n        metadata: metadata,\r\n        msgType: \"NOTIFICATION\"\r\n    };\r\n}\r\n",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1749183002434,
+        "allEnabledUntil" : 1749183836383,
         "failuresEnabled" : false
       },
       "externalId" : null,
