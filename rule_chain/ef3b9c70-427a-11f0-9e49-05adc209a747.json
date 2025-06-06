@@ -115,8 +115,8 @@
         "scriptLang" : "JS",
         "jsScript" : "var msg = { \"trigger\": \"twelve_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var msg = { \"trigger\": \"twelve_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "originatorId" : "f1c09860-40b3-11f0-b971-355c7b7ccee6",
-        "originatorType" : "ENTITY_GROUP"
+        "originatorId" : "49d86ed0-4152-11f0-9143-ed31251bb06c",
+        "originatorType" : "DEVICE"
       },
       "configurationVersion" : 2,
       "createdTime" : 0,
