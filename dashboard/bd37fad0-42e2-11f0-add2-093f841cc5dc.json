@@ -78,7 +78,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : "",
-              "entityAliasId" : "019a336f-9ba0-0f6b-b607-3472f6c92e98",
+              "entityAliasId" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
               "dataKeys" : [ {
                 "name" : "name",
                 "type" : "entityField",
@@ -151,18 +151,21 @@
         }
       },
       "entityAliases" : {
-        "019a336f-9ba0-0f6b-b607-3472f6c92e98" : {
-          "id" : "019a336f-9ba0-0f6b-b607-3472f6c92e98",
-          "alias" : "AllAssets",
+        "aa950966-4910-c8e6-1e0b-95af28e1e016" : {
+          "id" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
+          "alias" : "AllDevices",
           "filter" : {
-            "type" : "entityGroup",
+            "type" : "assetSearchQuery",
             "resolveMultiple" : true,
-            "groupStateEntity" : false,
+            "rootStateEntity" : true,
             "stateEntityParamName" : null,
-            "defaultStateGroupType" : null,
-            "defaultStateEntityGroup" : null,
-            "groupType" : "ASSET",
-            "entityGroup" : "2b3c9680-40b3-11f0-b6b1-cf2629369acd"
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "assetTypes" : [ "Emplacement de site" ]
           }
         }
       },
