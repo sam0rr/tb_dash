@@ -565,8 +565,8 @@
     }, {
       "additionalInfo" : {
         "description" : "file.io Get Link Failure",
-        "layoutX" : 2205,
-        "layoutY" : 777
+        "layoutX" : 2186,
+        "layoutY" : 772
       },
       "configuration" : {
         "scriptLang" : "JS",
