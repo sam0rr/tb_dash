@@ -137,7 +137,7 @@
         "startInterval" : 12,
         "startIntervalTimeUnit" : "HOURS",
         "endInterval" : 1,
-        "endIntervalTimeUnit" : "HOURS"
+        "endIntervalTimeUnit" : "MILLISECONDS"
       },
       "configurationVersion" : 2,
       "createdTime" : 0,
@@ -458,7 +458,7 @@
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://transfer.sh/${filename}",
-        "requestMethod" : "POST",
+        "requestMethod" : "PUT",
         "useSimpleClientHttpFactory" : true,
         "parseToPlainText" : false,
         "ignoreRequestBody" : false,
@@ -474,7 +474,6 @@
         "headers" : {
           "Content-Type" : "text/csv"
         },
-        "body" : "${csv}",
         "credentials" : {
           "type" : "anonymous"
         },
