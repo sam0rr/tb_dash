@@ -17,9 +17,755 @@
     "type" : "CORE"
   },
   "metaData" : {
-    "connections" : null,
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 5,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 6,
+      "type" : "False"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 7,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 8,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 9,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 18,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 21,
+      "type" : "Failure"
+    } ],
     "firstNodeIndex" : null,
-    "nodes" : [ ],
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "Generate every 6 hours data for the CSV",
+        "layoutX" : 89,
+        "layoutY" : 637
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 21600,
+        "scriptLang" : "JS",
+        "jsScript" : "var msg = { \"trigger\": \"six_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "tbelScript" : "var msg = { \"trigger\": \"six_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "f1c09860-40b3-11f0-b971-355c7b7ccee6",
+        "originatorType" : "ENTITY_GROUP"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f0-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Six-Hour Timer",
+      "queueName" : "HighPriority",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Check 6h trigger for CSV",
+        "layoutX" : 427,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "if (msg.trigger === \"six_hour_csv\") {\n    return { msg: msg, metadata: metadata, msgType: msgType };\n}\nreturn null;",
+        "tbelScript" : "if (msg.trigger === \"six_hour_csv\") {\n    return { msg: msg, metadata: metadata, msgType: msgType };\n}\nreturn null;"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f1-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Check 6h trigger",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Fetch last 6h telemetry for all devices",
+        "layoutX" : 762,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "Temp1", "Temp2", "defr", "fans", "refr", "dig1", "dig2" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "ALL",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : true,
+        "startIntervalPattern" : "21600000",
+        "endIntervalPattern" : "0",
+        "startInterval" : 6,
+        "startIntervalTimeUnit" : "HOURS",
+        "endInterval" : 0,
+        "endIntervalTimeUnit" : "HOURS"
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f2-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Fetch last 6h telemetry",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Build 6h CSV for all devices",
+        "layoutX" : 1111,
+        "layoutY" : 497
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function formatDateForFilename(ts) {\n    const d = new Date(ts);\n    const pad = n => n.toString().padStart(2, '0');\n    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}_${pad(d.getHours())}`;\n}\n\nconst dateStr = formatDateForFilename(Date.now());\nvar csv = \"device,timestamp,Temp1,Temp2,defr,fans,refr,dig1,dig2\\n\";\n\nfor (var i = 0; i < msg.length; i++) {\n    var row = msg[i];\n    var ts = new Date(row.ts).toISOString().replace(\"T\", \" \").substring(0, 16);\n    var vals = row.values || {};\n    var deviceName = row.deviceName || metadata.deviceName || \"UnknownDevice\";\n\n    csv += [\n        deviceName,\n        ts,\n        vals.Temp1 ?? \"\",\n        vals.Temp2 ?? \"\",\n        vals.defr ?? \"\",\n        vals.fans ?? \"\",\n        vals.refr ?? \"\",\n        vals.dig1 ?? \"\",\n        vals.dig2 ?? \"\"\n    ].join(\",\") + \"\\n\";\n}\n\nreturn {\n    msg: {\n        csv: csv,\n        filename: `rapport_${dateStr}.csv`\n    },\n    metadata: metadata,\n    msgType: \"NOTIFICATION\"\n};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f3-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Build 6h CSV",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log 6h CSV",
+        "layoutX" : 1372,
+        "layoutY" : 325
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"CSV preview (truncated):\\n\\n\" + (msg.csv || \"\").substring(0, 500) + \"...\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f4-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log 6h CSV",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log Node \"Generator execution failed\"",
+        "layoutX" : 422,
+        "layoutY" : 761
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Generator failed\\nMessage:\\n\" + JSON.stringify(msg, null, 2) + \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c030f5-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log Node \"Generator execution failed\"",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log ignored trigger",
+        "layoutX" : 760,
+        "layoutY" : 681
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Ignored message: trigger was '\" + msg.trigger + \"'\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05800-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log ignored trigger",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log trigger check failed",
+        "layoutX" : 771,
+        "layoutY" : 842
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Script error in 'Check 6h trigger':\\n\" + JSON.stringify(msg, null, 2) + \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05801-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log trigger check failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log telemetry fetch failure",
+        "layoutX" : 1101,
+        "layoutY" : 788
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to fetch telemetry.\\n\" + \"Device: \" + metadata.deviceName + \"\\n\" + \"Message:\\n\" + JSON.stringify(msg, null, 2);",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05802-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log telemetry fetch failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log CSV generation failure",
+        "layoutX" : 1386,
+        "layoutY" : 785
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to build CSV.\\nMessage:\\n\" + JSON.stringify(msg, null, 2) + \"\\nMetadata:\\n\" + JSON.stringify(metadata, null, 2);",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05803-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log CSV generation failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log generator success",
+        "layoutX" : 427,
+        "layoutY" : 341
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Generator triggered successfully at \" + new Date(metadata.timestamp).toISOString();",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05804-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log generator success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log trigger accepted",
+        "layoutX" : 766,
+        "layoutY" : 335
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Trigger accepted: \" + msg.trigger;",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05805-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log trigger accepted",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log telemetry fetch success",
+        "layoutX" : 1108,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Successfully fetched telemetry for: \" + metadata.deviceName + \"\\nNumber of entries: \" + msg.length;",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05806-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log telemetry fetch success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "POST 6h CSV report to Teams via webhook",
+        "layoutX" : 2143,
+        "layoutY" : 487
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "http://localhost/api",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : true,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "application/json"
+        },
+        "body" : "{\n  \"text\": \"Rapport CSV 6h généré automatiquement :\\n ${link}\"\n}",
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : "25000"
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05807-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Send 6h CSV to Teams",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Teams notification sent",
+        "layoutX" : 2435,
+        "layoutY" : 316
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Teams notification sent successfully.\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05808-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log Teams notification sent",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Teams notification failed",
+        "layoutX" : 2497,
+        "layoutY" : 747
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Teams notification failed to send.\\n\\nError:\\n\" + JSON.stringify(msg, null, 2);",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c05809-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log Teams notification failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Upload 6h CSV to transfer.sh for Teams",
+        "layoutX" : 1450,
+        "layoutY" : 494
+      },
+      "configuration" : {
+        "restEndpointUrlPattern" : "https://transfer.sh/${filename}",
+        "requestMethod" : "POST",
+        "useSimpleClientHttpFactory" : true,
+        "parseToPlainText" : false,
+        "ignoreRequestBody" : false,
+        "enableProxy" : false,
+        "useSystemProxyProperties" : false,
+        "proxyScheme" : null,
+        "proxyHost" : null,
+        "proxyPort" : 0,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "readTimeoutMs" : 0,
+        "maxParallelRequestsCount" : 0,
+        "headers" : {
+          "Content-Type" : "text/csv"
+        },
+        "body" : "${csv}",
+        "credentials" : {
+          "type" : "anonymous"
+        },
+        "maxInMemoryBufferSizeInKb" : "25000"
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f10-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Upload CSV to transfer.sh",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Transfer.sh Success",
+        "layoutX" : 1765,
+        "layoutY" : 321
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"CSV sent to transfer.sh\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f11-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Transfer.sh Success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Transfer.sh Failure",
+        "layoutX" : 1757,
+        "layoutY" : 769
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to build CSV.\\nMessage:\\n\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f12-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Transfer.sh Failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Get transfer.sh link",
+        "layoutX" : 1771,
+        "layoutY" : 489
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return {\n    msg: { link: msg.data },\n    metadata: metadata,\n    msgType: \"NOTIFICATION\"\n};",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f13-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Get transfer.sh link",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Transfer.sh Get Link Success",
+        "layoutX" : 2105,
+        "layoutY" : 319
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Transfer.sh link ok\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f14-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Transfer.sh Get Link Success",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Transfer.sh Get Link Failure",
+        "layoutX" : 2172,
+        "layoutY" : 762
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to get transfer.sh link.\\nMessage:\\n\";",
+        "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "29c07f15-427a-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Transfer.sh Get Link Failure",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    } ],
     "ruleChainConnections" : null
   },
   "relations" : [ ],
