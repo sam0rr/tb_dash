@@ -45,7 +45,7 @@
                 "limit" : 200
               }
             },
-            "showTitle" : true,
+            "showTitle" : false,
             "backgroundColor" : "rgb(255, 255, 255)",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
@@ -133,11 +133,18 @@
               },
               "gridSettings" : {
                 "layoutType" : "default",
-                "backgroundColor" : "#eeeeee",
+                "backgroundColor" : "#FFFFFF",
                 "columns" : 24,
                 "margin" : 10,
                 "outerMargin" : true,
-                "backgroundSizeMode" : "100%"
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
               }
             }
           }
@@ -201,7 +208,14 @@
         "showEntitiesSelect" : true,
         "showDashboardTimewindow" : true,
         "showDashboardExport" : true,
-        "toolbarAlwaysOpen" : true
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
       }
     },
     "name" : "DailyDashboard",
