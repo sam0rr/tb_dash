@@ -1,0 +1,217 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "apply_lifetime to all devices (tls) -> root rule chain"
+    },
+    "configuration" : null,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "a7b86310-423e-11f0-9e49-05adc209a747"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "aab7eed0-423b-11f0-add2-093f841cc5dc"
+    },
+    "name" : "apply_lifetime",
+    "root" : true,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 5,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 0,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 4,
+      "type" : "Failure"
+    } ],
+    "firstNodeIndex" : 1,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "Save Telemetry With Expiration",
+        "layoutX" : 681,
+        "layoutY" : 265
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "defaultTTL" : 1209600,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1749170963078,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cc64d7f0-423b-11f0-8baa-c9d27140f93d"
+      },
+      "name" : "Save Telemetry With Expiration",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Filter POST_TELEMETRY",
+        "layoutX" : 320,
+        "layoutY" : 265
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1749170963078,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a7b86310-423e-11f0-9e49-05adc209a747"
+      },
+      "name" : "Filter POST_TELEMETRY",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log matched message type",
+        "layoutX" : 524,
+        "layoutY" : 121
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n",
+        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5da9da0-424b-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log matched message type",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Confirms the telemetry was saved with TTL",
+        "layoutX" : 896,
+        "layoutY" : 119
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Telemetry saved successfully for device: \" + metadata.deviceName;\n",
+        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5dac4b0-424b-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log telemetry saved",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Catches all non-POST_TELEMETRY_REQUEST messages",
+        "layoutX" : 525,
+        "layoutY" : 420
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Unknown or unsupported message type: \" + msgType;\n",
+        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5dac4b1-424b-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log unknown message type",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Logs if saving telemetry fails due to TTL error, system issue, etc.",
+        "layoutX" : 895,
+        "layoutY" : 424
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to save telemetry.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d5dac4b2-424b-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "Log telemetry save failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
