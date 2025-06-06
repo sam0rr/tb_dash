@@ -1,0 +1,194 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "DailyDashboard",
+    "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
+    "mobileHide" : true,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "DailyDashboard for report",
+      "widgets" : {
+        "ts-table-24h-report" : {
+          "typeFullFqn" : "latest.timeseries_table",
+          "type" : "timeseries",
+          "sizeX" : 20,
+          "sizeY" : 14,
+          "row" : 0,
+          "col" : 0,
+          "id" : "ts-table-24h-report",
+          "config" : {
+            "useDashboardTimewindow" : true,
+            "showTitle" : true,
+            "title" : "Rapport 24h par site et appareil",
+            "enableFullscreen" : true,
+            "enableDataExport" : true,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "AllDevices",
+              "entityAliasId" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
+              "dataKeys" : [ {
+                "name" : "Temp1",
+                "type" : "timeseries",
+                "label" : "Temp1"
+              }, {
+                "name" : "Temp2",
+                "type" : "timeseries",
+                "label" : "Temp2"
+              }, {
+                "name" : "refr",
+                "type" : "timeseries",
+                "label" : "refr"
+              }, {
+                "name" : "fans",
+                "type" : "timeseries",
+                "label" : "fans"
+              }, {
+                "name" : "dig1",
+                "type" : "timeseries",
+                "label" : "dig1"
+              }, {
+                "name" : "dig2",
+                "type" : "timeseries",
+                "label" : "dig2"
+              } ]
+            } ],
+            "timewindow" : {
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE"
+              }
+            },
+            "displayTimewindow" : true,
+            "showLegend" : false,
+            "pageSize" : 10000,
+            "decimals" : 2
+          }
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "DailyDashboard",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "ts-table-24h-report" : {
+                  "sizeX" : 20,
+                  "sizeY" : 14,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#FFFFFF",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "minColumns" : 24,
+                "viewFormat" : "grid",
+                "autoFillHeight" : true,
+                "rowHeight" : 70,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "aa950966-4910-c8e6-1e0b-95af28e1e016" : {
+          "id" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
+          "alias" : "AllDevices",
+          "filter" : {
+            "type" : "assetSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "assetTypes" : [ "Emplacement de site" ]
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1749133805582,
+            "endTimeMs" : 1749220205582
+          },
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideFixedInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
+      }
+    },
+    "name" : "DailyDashboard",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "06ebca40-42e7-11f0-b94b-f3b14d0c4306"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
