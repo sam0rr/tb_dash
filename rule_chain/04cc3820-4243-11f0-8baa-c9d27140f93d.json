@@ -138,7 +138,7 @@
         "layoutY" : 497
       },
       "configuration" : {
-        "latestTsKeyNames" : [ "Temp1, Temp2, defr, fans, refr, dig1, dig2" ],
+        "latestTsKeyNames" : [ "Temp1", "Temp2", "defr", "fans", "refr", "dig1", "dig2" ],
         "aggregation" : "AVG",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
