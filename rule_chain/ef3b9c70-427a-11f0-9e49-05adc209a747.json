@@ -106,7 +106,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1749178767931,
         "failuresEnabled" : false
       },
       "externalId" : null,
@@ -130,7 +130,7 @@
         "aggregation" : "NONE",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
-        "limit" : 100000,
+        "limit" : 1000,
         "useMetadataIntervalPatterns" : true,
         "startIntervalPattern" : "43200000",
         "endIntervalPattern" : "0",
@@ -143,7 +143,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1749178767931,
         "failuresEnabled" : false
       },
       "externalId" : null,
@@ -170,7 +170,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1749176852873,
+        "allEnabledUntil" : 1749178767931,
         "failuresEnabled" : false
       },
       "externalId" : null,
@@ -484,7 +484,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 0,
+        "allEnabledUntil" : 1749178767931,
         "failuresEnabled" : false
       },
       "externalId" : null,
