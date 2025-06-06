@@ -480,7 +480,7 @@
       "additionalInfo" : {
         "description" : "POST daily CSV report to Teams via webhook",
         "layoutX" : 2143,
-        "layoutY" : 496
+        "layoutY" : 487
       },
       "configuration" : {
         "restEndpointUrlPattern" : "http://localhost/api",
