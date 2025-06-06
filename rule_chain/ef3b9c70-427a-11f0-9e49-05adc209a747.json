@@ -457,8 +457,8 @@
         "layoutY" : 494
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://file.io?expires=1w",
-        "requestMethod" : "PUT",
+        "restEndpointUrlPattern" : "https://file.io",
+        "requestMethod" : "POST",
         "useSimpleClientHttpFactory" : true,
         "parseToPlainText" : false,
         "ignoreRequestBody" : false,
@@ -471,7 +471,9 @@
         "proxyPassword" : null,
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
-        "headers" : { },
+        "headers" : {
+          "Content-Type" : "multipart/form-data"
+        },
         "credentials" : {
           "type" : "anonymous"
         },
@@ -481,7 +483,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1749179924795,
+        "allEnabledUntil" : 1749180911085,
         "failuresEnabled" : false
       },
       "externalId" : null,
