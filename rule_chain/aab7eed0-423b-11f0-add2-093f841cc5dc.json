@@ -102,7 +102,7 @@
       "additionalInfo" : {
         "description" : "Log matched message type",
         "layoutX" : 524,
-        "layoutY" : 121
+        "layoutY" : 119
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -154,7 +154,7 @@
       "additionalInfo" : {
         "description" : "Catches all non-POST_TELEMETRY_REQUEST messages",
         "layoutX" : 525,
-        "layoutY" : 420
+        "layoutY" : 430
       },
       "configuration" : {
         "scriptLang" : "JS",
