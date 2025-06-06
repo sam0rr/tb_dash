@@ -51,7 +51,7 @@
       "type" : "Failure"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 18,
+      "toIndex" : 17,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -62,20 +62,28 @@
       "toIndex" : 11,
       "type" : "Failure"
     }, {
-      "fromIndex" : 15,
+      "fromIndex" : 14,
       "toIndex" : 9,
       "type" : "Success"
     }, {
-      "fromIndex" : 15,
-      "toIndex" : 16,
+      "fromIndex" : 14,
+      "toIndex" : 15,
       "type" : "Success"
     }, {
-      "fromIndex" : 15,
-      "toIndex" : 17,
+      "fromIndex" : 14,
+      "toIndex" : 16,
       "type" : "Failure"
     }, {
-      "fromIndex" : 18,
-      "toIndex" : 15,
+      "fromIndex" : 17,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 14,
       "type" : "Success"
     } ],
     "firstNodeIndex" : null,
@@ -444,52 +452,6 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
-        "description" : "Upload 12h CSV to transfer.sh for Teams",
-        "layoutX" : 1440,
-        "layoutY" : 522
-      },
-      "configuration" : {
-        "restEndpointUrlPattern" : "https://file.io",
-        "requestMethod" : "POST",
-        "useSimpleClientHttpFactory" : true,
-        "parseToPlainText" : false,
-        "ignoreRequestBody" : false,
-        "enableProxy" : false,
-        "useSystemProxyProperties" : false,
-        "proxyScheme" : null,
-        "proxyHost" : null,
-        "proxyPort" : 0,
-        "proxyUser" : null,
-        "proxyPassword" : null,
-        "readTimeoutMs" : 0,
-        "maxParallelRequestsCount" : 0,
-        "headers" : {
-          "Content-Type" : "multipart/form-data"
-        },
-        "credentials" : {
-          "type" : "anonymous"
-        },
-        "maxInMemoryBufferSizeInKb" : "25000"
-      },
-      "configurationVersion" : 3,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1749180911085,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "ef447613-427a-11f0-9e49-05adc209a747"
-      },
-      "name" : "Upload CSV to transfer.sh",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
-    }, {
-      "additionalInfo" : {
         "description" : "Transfer.sh Success",
         "layoutX" : 1765,
         "layoutY" : 321
@@ -631,8 +593,8 @@
     }, {
       "additionalInfo" : {
         "description" : "UploadCSVToFileIO",
-        "layoutX" : 1425,
-        "layoutY" : 613
+        "layoutX" : 1485,
+        "layoutY" : 501
       },
       "configuration" : {
         "integrationId" : "fb2efe90-4285-11f0-b50e-99d9c8fcd8e7"
