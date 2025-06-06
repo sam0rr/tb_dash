@@ -139,7 +139,7 @@
       },
       "configuration" : {
         "latestTsKeyNames" : [ "Temp1", "Temp2", "defr", "fans", "refr", "dig1", "dig2" ],
-        "aggregation" : "AVG",
+        "aggregation" : "NONE",
         "fetchMode" : "ALL",
         "orderBy" : "ASC",
         "limit" : 1000,
