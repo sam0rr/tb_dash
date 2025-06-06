@@ -514,7 +514,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return {\n    msg: { link: msg.data },\n    metadata: metadata,\n    msgType: \"NOTIFICATION\"\n};",
+        "jsScript" : "function Transform(msg, metadata, msgType) {\r\n    var responseJson;\r\n    try {\r\n        responseJson = JSON.parse(msg.data);\r\n    } catch (e) {\r\n        return {\r\n            msg: { link: \"\" },\r\n            metadata: metadata,\r\n            msgType: \"ERROR\"\r\n        };\r\n    }\r\n    var fileLink = responseJson.link || \"\";\r\n\r\n    return {\r\n        msg: { link: fileLink },\r\n        metadata: metadata,\r\n        msgType: \"NOTIFICATION\"\r\n    };\r\n}\r\n",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
