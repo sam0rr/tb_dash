@@ -600,7 +600,8 @@
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
         "headers" : {
-          "Content-Type" : "text/csv"
+          "Content-Type" : "text/csv",
+          "body" : "${csv}"
         },
         "credentials" : {
           "type" : "anonymous"
