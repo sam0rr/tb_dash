@@ -51,7 +51,7 @@
       "type" : "Failure"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 12,
+      "toIndex" : 18,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -61,18 +61,6 @@
       "fromIndex" : 9,
       "toIndex" : 11,
       "type" : "Failure"
-    }, {
-      "fromIndex" : 12,
-      "toIndex" : 13,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 12,
-      "toIndex" : 14,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 12,
-      "toIndex" : 15,
-      "type" : "Success"
     }, {
       "fromIndex" : 15,
       "toIndex" : 9,
@@ -85,6 +73,10 @@
       "fromIndex" : 15,
       "toIndex" : 17,
       "type" : "Failure"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 15,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -453,8 +445,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Upload 12h CSV to transfer.sh for Teams",
-        "layoutX" : 1450,
-        "layoutY" : 494
+        "layoutX" : 1440,
+        "layoutY" : 522
       },
       "configuration" : {
         "restEndpointUrlPattern" : "https://file.io",
@@ -567,7 +559,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1749179924795,
+        "allEnabledUntil" : 1749181463282,
         "failuresEnabled" : false
       },
       "externalId" : null,
@@ -636,6 +628,32 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "UploadCSVToFileIO",
+        "layoutX" : 1425,
+        "layoutY" : 613
+      },
+      "configuration" : {
+        "integrationId" : "fb2efe90-4285-11f0-b50e-99d9c8fcd8e7"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 1749181463282,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "70bab320-4286-11f0-b94b-f3b14d0c4306"
+      },
+      "name" : "UploadCSVToFileIO",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode"
     } ],
     "ruleChainConnections" : null
   },
