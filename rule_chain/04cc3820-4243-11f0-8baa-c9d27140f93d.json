@@ -525,8 +525,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Teams notification sent\nLog daily CSV\nLog Teams notification sent",
-        "layoutX" : 2529,
-        "layoutY" : 303
+        "layoutX" : 2435,
+        "layoutY" : 316
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -553,7 +553,7 @@
     }, {
       "additionalInfo" : {
         "description" : "Teams notification failed",
-        "layoutX" : 2529,
+        "layoutX" : 2497,
         "layoutY" : 747
       },
       "configuration" : {
@@ -581,7 +581,7 @@
     }, {
       "additionalInfo" : {
         "description" : "Upload CSV to transfer.sh for Teams",
-        "layoutX" : 1477,
+        "layoutX" : 1450,
         "layoutY" : 494
       },
       "configuration" : {
@@ -627,8 +627,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Transfer.sh Success\nLog daily CSV\nLog daily CSV",
-        "layoutX" : 1797,
-        "layoutY" : 325
+        "layoutX" : 1765,
+        "layoutY" : 321
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -655,8 +655,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Transfer.sh Failure\nLog daily CSV\nLog daily CSV",
-        "layoutX" : 1789,
-        "layoutY" : 773
+        "layoutX" : 1757,
+        "layoutY" : 769
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -683,8 +683,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Get transfer.sh link",
-        "layoutX" : 1803,
-        "layoutY" : 493
+        "layoutX" : 1771,
+        "layoutY" : 489
       },
       "configuration" : {
         "scriptLang" : "JS",
