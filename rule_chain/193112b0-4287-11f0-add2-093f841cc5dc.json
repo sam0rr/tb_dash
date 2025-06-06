@@ -159,8 +159,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Build 12h CSV for all devices",
-        "layoutX" : 1111,
-        "layoutY" : 497
+        "layoutX" : 1120,
+        "layoutY" : 492
       },
       "configuration" : {
         "scriptLang" : "JS",
