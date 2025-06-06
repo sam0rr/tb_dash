@@ -213,8 +213,8 @@
         "selectedTab" : 0,
         "realtime" : {
           "realtimeType" : 0,
-          "interval" : 1800000,
-          "timewindowMs" : 604800000,
+          "interval" : 3600000,
+          "timewindowMs" : 86400000,
           "quickInterval" : "CURRENT_DAY",
           "hideInterval" : false,
           "hideLastInterval" : false,
@@ -236,7 +236,7 @@
         },
         "aggregation" : {
           "type" : "AVG",
-          "limit" : 25000
+          "limit" : 50000
         },
         "timezone" : null
       },
