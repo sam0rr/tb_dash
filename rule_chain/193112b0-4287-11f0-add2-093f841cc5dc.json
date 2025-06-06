@@ -50,10 +50,6 @@
       "toIndex" : 6,
       "type" : "Failure"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
       "fromIndex" : 9,
       "toIndex" : 10,
       "type" : "Success"
@@ -73,18 +69,6 @@
       "fromIndex" : 14,
       "toIndex" : 16,
       "type" : "Failure"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 12,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 13,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 14,
-      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -590,32 +574,6 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "FileIoClient",
-        "layoutX" : 1484,
-        "layoutY" : 492
-      },
-      "configuration" : {
-        "integrationId" : "995a9a90-4289-11f0-add2-093f841cc5dc"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugSettings" : {
-        "allEnabled" : false,
-        "allEnabledUntil" : 1749182971853,
-        "failuresEnabled" : false
-      },
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "1938b3d7-4287-11f0-9e49-05adc209a747"
-      },
-      "name" : "FileIoClient",
-      "queueName" : null,
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode"
     } ],
     "ruleChainConnections" : null
   },
