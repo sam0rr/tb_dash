@@ -176,7 +176,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var csv = \"timestamp,Temp1,Temp2,defr,fans,refr,dig1,dig2\\n\";\n\nfor (var i = 0; i < msg.length; i++) {\n    var row = msg[i];\n    var ts = row.ts;\n    var vals = row.values;\n\n    csv += [\n        ts,\n        vals.Temp1 ?? \"\",\n        vals.Temp2 ?? \"\",\n        vals.defr ?? \"\",\n        vals.fans ?? \"\",\n        vals.refr ?? \"\",\n        vals.dig1 ?? \"\",\n        vals.dig2 ?? \"\"\n    ].join(\",\") + \"\\n\";\n}\n\nreturn {\n    msg: { csv: csv },\n    metadata: metadata,\n    msgType: \"NOTIFICATION\"\n};\n",
+        "jsScript" : "var csv = \"device,timestamp,Temp1,Temp2,defr,fans,refr,dig1,dig2\\n\";\r\n\r\nfor (var i = 0; i < msg.length; i++) {\r\n    var row = msg[i];\r\n    var ts = new Date(row.ts).toISOString().replace(\"T\", \" \").substring(0, 16); // Format lisible\r\n    var vals = row.values || {};\r\n    var deviceName = row.deviceName || metadata.deviceName || \"UnknownDevice\";\r\n\r\n    csv += [\r\n        deviceName,\r\n        ts,\r\n        vals.Temp1 ?? \"\",\r\n        vals.Temp2 ?? \"\",\r\n        vals.defr ?? \"\",\r\n        vals.fans ?? \"\",\r\n        vals.refr ?? \"\",\r\n        vals.dig1 ?? \"\",\r\n        vals.dig2 ?? \"\"\r\n    ].join(\",\") + \"\\n\";\r\n}\r\n\r\nreturn {\r\n    msg: {\r\n        csv: csv\r\n    },\r\n    metadata: metadata,\r\n    msgType: \"NOTIFICATION\"\r\n};\r\n",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
