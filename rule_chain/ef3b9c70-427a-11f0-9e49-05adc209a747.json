@@ -170,7 +170,7 @@
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1749178767931,
+        "allEnabledUntil" : 1749180181740,
         "failuresEnabled" : false
       },
       "externalId" : null,
@@ -472,7 +472,7 @@
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
         "headers" : {
-          "Content-Type" : "multipart/form-data"
+          "Content-Type" : "text/csv"
         },
         "credentials" : {
           "type" : "anonymous"
