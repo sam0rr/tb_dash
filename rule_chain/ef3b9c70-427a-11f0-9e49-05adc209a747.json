@@ -111,7 +111,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 43200,
         "scriptLang" : "JS",
         "jsScript" : "var msg = { \"trigger\": \"twelve_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "tbelScript" : "var msg = { \"trigger\": \"twelve_hour_csv\" };\nvar metadata = { timestamp: Date.now() };\nvar msgType = \"CUSTOM\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
