@@ -103,7 +103,7 @@
         "id" : "201e5200-4245-11f0-b94b-f3b14d0c4306"
       },
       "name" : "Daily Timer",
-      "queueName" : null,
+      "queueName" : "HighPriority",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
