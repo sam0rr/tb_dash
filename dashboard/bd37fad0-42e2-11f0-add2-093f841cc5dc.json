@@ -115,6 +115,107 @@
           "row" : 0,
           "col" : 0,
           "id" : "960257b0-2144-eac4-ae22-65eb1a8ea9c1"
+        },
+        "779c53ab-caf4-1691-371b-90a5e3686623" : {
+          "typeFullFqn" : "system.cards.timeseries_table",
+          "type" : "timeseries",
+          "sizeX" : 16,
+          "sizeY" : 13,
+          "row" : 0,
+          "col" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "56139a34-8a39-998e-042f-927b122a64b9",
+              "dataKeys" : [ {
+                "name" : "defr",
+                "label" : "defr",
+                "type" : "timeseries",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.7988253103740612
+              }, {
+                "name" : "dig1",
+                "label" : "dig1",
+                "type" : "timeseries",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.415951028442771
+              }, {
+                "name" : "dig2",
+                "label" : "dig2",
+                "type" : "timeseries",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8257309745083392
+              }, {
+                "name" : "fans",
+                "label" : "fans",
+                "type" : "timeseries",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.5415914299614857
+              }, {
+                "name" : "refr",
+                "label" : "refr",
+                "type" : "timeseries",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.6972778939057747
+              }, {
+                "name" : "Temp1",
+                "label" : "Temp1",
+                "type" : "timeseries",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.08866777205460474
+              }, {
+                "name" : "Temp2",
+                "label" : "Temp2",
+                "type" : "timeseries",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.28335272368664943
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 60000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "showTimestamp" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10
+            },
+            "title" : "Timeseries table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : { },
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "displayTimewindow" : true,
+            "configMode" : "basic"
+          },
+          "id" : "779c53ab-caf4-1691-371b-90a5e3686623"
         }
       },
       "states" : {
@@ -128,6 +229,12 @@
                   "sizeX" : 14,
                   "sizeY" : 13,
                   "row" : 0,
+                  "col" : 0
+                },
+                "779c53ab-caf4-1691-371b-90a5e3686623" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 13,
                   "col" : 0
                 }
               },
@@ -163,6 +270,18 @@
             "defaultStateEntityGroup" : null,
             "groupType" : "DEVICE",
             "entityGroup" : "f1c09860-40b3-11f0-b971-355c7b7ccee6"
+          }
+        },
+        "56139a34-8a39-998e-042f-927b122a64b9" : {
+          "id" : "56139a34-8a39-998e-042f-927b122a64b9",
+          "alias" : "pi-test-2",
+          "filter" : {
+            "type" : "singleEntity",
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "49d86ed0-4152-11f0-9143-ed31251bb06c"
+            },
+            "resolveMultiple" : false
           }
         }
       },
