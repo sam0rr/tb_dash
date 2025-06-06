@@ -155,17 +155,14 @@
           "id" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
           "alias" : "AllDevices",
           "filter" : {
-            "type" : "assetSearchQuery",
+            "type" : "entityGroup",
             "resolveMultiple" : true,
-            "rootStateEntity" : true,
+            "groupStateEntity" : false,
             "stateEntityParamName" : null,
-            "defaultStateEntity" : null,
-            "rootEntity" : null,
-            "direction" : "FROM",
-            "maxLevel" : 1,
-            "fetchLastLevelOnly" : false,
-            "relationType" : "Contains",
-            "assetTypes" : [ "Emplacement de site" ]
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "DEVICE",
+            "entityGroup" : "f1c09860-40b3-11f0-b971-355c7b7ccee6"
           }
         }
       },
