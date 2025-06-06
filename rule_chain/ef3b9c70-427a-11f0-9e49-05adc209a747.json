@@ -457,7 +457,7 @@
         "layoutY" : 494
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://transfer.sh/${filename}",
+        "restEndpointUrlPattern" : "https://file.io?expires=1w",
         "requestMethod" : "PUT",
         "useSimpleClientHttpFactory" : true,
         "parseToPlainText" : false,
@@ -472,7 +472,7 @@
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
         "headers" : {
-          "Content-Type" : "text/csv"
+          "Content-Type" : "multipart/form-data"
         },
         "credentials" : {
           "type" : "anonymous"
