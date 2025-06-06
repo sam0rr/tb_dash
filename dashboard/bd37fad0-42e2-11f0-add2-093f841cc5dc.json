@@ -182,14 +182,10 @@
           "id" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
           "alias" : "AllDevices",
           "filter" : {
-            "type" : "entityGroup",
+            "type" : "entityList",
             "resolveMultiple" : true,
-            "groupStateEntity" : false,
-            "stateEntityParamName" : null,
-            "defaultStateGroupType" : null,
-            "defaultStateEntityGroup" : null,
-            "groupType" : "DEVICE",
-            "entityGroup" : "f1c09860-40b3-11f0-b971-355c7b7ccee6"
+            "entityType" : "DEVICE",
+            "entityList" : [ "f9348de0-40b3-11f0-90ac-c38ddc901b1d", "49d86ed0-4152-11f0-9143-ed31251bb06c" ]
           }
         },
         "56139a34-8a39-998e-042f-927b122a64b9" : {
