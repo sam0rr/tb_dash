@@ -1714,14 +1714,38 @@
               "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
               "realtime" : {
+                "realtimeType" : 0,
                 "interval" : 1000,
-                "timewindowMs" : 60000
+                "timewindowMs" : 900000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1749588989435,
+                  "endTimeMs" : 1749675389435
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
               },
               "aggregation" : {
                 "type" : "NONE",
                 "limit" : 200
-              }
+              },
+              "timezone" : null
             },
             "showTitle" : true,
             "backgroundColor" : "rgb(255, 255, 255)",
