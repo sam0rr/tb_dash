@@ -1657,7 +1657,7 @@
           "config" : {
             "datasources" : [ {
               "type" : "entity",
-              "entityAliasId" : "69c0f8bf-2f53-5f05-00fa-a0d5b386c506",
+              "entityAliasId" : "16714a49-f551-87f5-ca79-684ee6611c46",
               "dataKeys" : [ {
                 "name" : "defr",
                 "label" : "defr",
@@ -1707,7 +1707,11 @@
                 "color" : "#8bc34a",
                 "settings" : { },
                 "_hash" : 0.6901363861044391
-              } ]
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
+              "latestDataKeys" : [ ]
             } ],
             "timewindow" : {
               "realtime" : {
@@ -1726,7 +1730,9 @@
             "settings" : {
               "showTimestamp" : true,
               "displayPagination" : true,
-              "defaultPageSize" : 10
+              "defaultPageSize" : 10,
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true
             },
             "title" : "Timeseries table",
             "dropShadow" : true,
@@ -1744,7 +1750,11 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "24px",
             "displayTimewindow" : true,
-            "configMode" : "basic"
+            "configMode" : "basic",
+            "titleFont" : null,
+            "titleColor" : null,
+            "titleIcon" : null,
+            "enableDataExport" : true
           },
           "id" : "45402c20-a448-809b-2fb5-c056de928fa1"
         }
