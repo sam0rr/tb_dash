@@ -535,7 +535,7 @@
               }
             },
             "showTitle" : false,
-            "backgroundColor" : "#FFFFFF67",
+            "backgroundColor" : "#FFFFFF",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
