@@ -2,7 +2,7 @@
   "entityType" : "ENTITY_GROUP",
   "entity" : {
     "additionalInfo" : {
-      "description" : "History Dashboard (all devices all data)"
+      "description" : "History Dashboard (All Devices All Data)"
     },
     "configuration" : {
       "columns" : [ {
