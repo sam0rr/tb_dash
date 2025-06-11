@@ -1741,14 +1741,13 @@
       },
       "filters" : { },
       "timewindow" : {
-        "displayValue" : "",
         "hideAggregation" : false,
         "hideAggInterval" : false,
         "hideTimezone" : false,
         "selectedTab" : 0,
         "realtime" : {
           "realtimeType" : 0,
-          "interval" : 1000,
+          "interval" : 10000,
           "timewindowMs" : 60000,
           "quickInterval" : "CURRENT_DAY",
           "hideInterval" : false,
@@ -1757,7 +1756,7 @@
         },
         "history" : {
           "historyType" : 0,
-          "interval" : 1000,
+          "interval" : 10000,
           "timewindowMs" : 60000,
           "fixedTimewindow" : {
             "startTimeMs" : 1748968158578,
@@ -1770,9 +1769,10 @@
           "hideQuickInterval" : false
         },
         "aggregation" : {
-          "type" : "AVG",
-          "limit" : 25000
-        }
+          "type" : "NONE",
+          "limit" : 50000
+        },
+        "timezone" : null
       },
       "settings" : {
         "stateControllerId" : "entity",
