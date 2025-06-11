@@ -539,13 +539,13 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
-              "maxValue" : 100,
+              "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
               "showValue" : true,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
-              "levelColors" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
               "refreshAnimationType" : ">",
               "refreshAnimationTime" : 700,
               "startAnimationType" : ">",
@@ -581,16 +581,15 @@
               "dashThickness" : 0,
               "decimals" : 0,
               "gaugeColor" : "#FFFFFF",
-              "gaugeType" : "horizontalBar",
+              "gaugeType" : "arc",
               "showTitle" : true,
               "title" : "Fan speed",
               "barColor" : {
-                "type" : "constant",
+                "type" : "gradient",
                 "color" : "#2196f3",
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
-                  "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
                   "gradientAdvanced" : [ {
                     "source" : {
                       "type" : "constant"
@@ -603,8 +602,14 @@
                     "color" : "rgba(255, 0, 0, 1)"
                   } ],
                   "minValue" : 0,
-                  "maxValue" : 100
-                }
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
               },
               "useFixedLevelColor" : false
             },
@@ -1029,57 +1034,6 @@
           "row" : 0,
           "col" : 0,
           "id" : "98916acd-6b17-5903-81c2-60d3b9662c64"
-        },
-        "d585b6f3-8b29-0630-850f-9dd3bc890f29" : {
-          "typeFullFqn" : "system.navigation_widgets.navigation_card",
-          "type" : "static",
-          "sizeX" : 2.5,
-          "sizeY" : 2,
-          "config" : {
-            "datasources" : [ {
-              "type" : "static",
-              "name" : "function",
-              "dataKeys" : [ {
-                "name" : "f(x)",
-                "type" : "function",
-                "label" : "Random",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.15479322438769105,
-                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
-              } ]
-            } ],
-            "timewindow" : {
-              "realtime" : {
-                "timewindowMs" : 60000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "rgba(255,255,255,0)",
-            "color" : "rgba(255,255,255,0.87)",
-            "padding" : "8px",
-            "settings" : {
-              "name" : "{i18n:device.devices}",
-              "icon" : "devices_other",
-              "path" : "/devices"
-            },
-            "title" : "Navigation card",
-            "dropShadow" : false,
-            "showTitleIcon" : false,
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "titleTooltip" : "",
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "showLegend" : false
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "d585b6f3-8b29-0630-850f-9dd3bc890f29"
         }
       },
       "states" : {
@@ -1112,12 +1066,6 @@
                   "sizeX" : 7,
                   "sizeY" : 2,
                   "row" : 2,
-                  "col" : 0
-                },
-                "d585b6f3-8b29-0630-850f-9dd3bc890f29" : {
-                  "sizeX" : 2,
-                  "sizeY" : 2,
-                  "row" : 11,
                   "col" : 0
                 }
               },
