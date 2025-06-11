@@ -93,7 +93,8 @@
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.7671167163893448,
-                "decimals" : 0
+                "decimals" : 6,
+                "units" : "°"
               }, {
                 "name" : "longitude",
                 "type" : "attribute",
@@ -101,7 +102,8 @@
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.14644245035287773,
-                "decimals" : 0
+                "decimals" : 6,
+                "units" : "°"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
