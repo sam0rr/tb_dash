@@ -382,7 +382,7 @@
               },
               "gridSettings" : {
                 "layoutType" : "default",
-                "backgroundColor" : "#00000098",
+                "backgroundColor" : "#FFFFFF99",
                 "columns" : 24,
                 "margin" : 10,
                 "outerMargin" : true,
@@ -391,7 +391,7 @@
                 "viewFormat" : "grid",
                 "autoFillHeight" : true,
                 "rowHeight" : 70,
-                "backgroundImageUrl" : "tb-image;/api/images/tenant/background.png",
+                "backgroundImageUrl" : null,
                 "mobileAutoFillHeight" : true,
                 "mobileRowHeight" : 40
               }
