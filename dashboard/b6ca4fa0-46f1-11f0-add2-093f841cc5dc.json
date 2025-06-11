@@ -163,7 +163,7 @@
               "fontWeight" : 400
             },
             "units" : "°C",
-            "decimals" : 0,
+            "decimals" : 2,
             "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
@@ -364,7 +364,7 @@
               "fontWeight" : 400
             },
             "units" : "°C",
-            "decimals" : 0,
+            "decimals" : 2,
             "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
@@ -495,7 +495,8 @@
                   }
                 },
                 "_hash" : 0.8424922413423962,
-                "decimals" : 0
+                "decimals" : 2,
+                "units" : "°C"
               }, {
                 "name" : "Temp2",
                 "type" : "timeseries",
@@ -571,7 +572,8 @@
                   }
                 },
                 "_hash" : 0.8610386589636373,
-                "decimals" : 0
+                "decimals" : 2,
+                "units" : "°C"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -700,6 +702,7 @@
               },
               "legendLabelColor" : "rgba(0, 0, 0, 0.76)",
               "legendConfig" : {
+                "direction" : "column",
                 "position" : "right",
                 "sortDataKeys" : false,
                 "showMin" : false,
@@ -966,7 +969,7 @@
                 "weight" : "500"
               },
               "valueFont" : {
-                "size" : 13,
+                "size" : 12,
                 "sizeUnit" : "px",
                 "family" : "Roboto",
                 "weight" : "500",
@@ -1030,7 +1033,7 @@
             "enableDataExport" : true,
             "borderRadius" : null,
             "units" : "",
-            "decimals" : null
+            "decimals" : 0
           },
           "row" : 0,
           "col" : 0,
