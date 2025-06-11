@@ -1706,7 +1706,7 @@
                 }
               },
               "gridSettings" : {
-                "layoutType" : "default",
+                "layoutType" : "scada",
                 "backgroundColor" : "#FFFFFF",
                 "columns" : 24,
                 "margin" : 10,
