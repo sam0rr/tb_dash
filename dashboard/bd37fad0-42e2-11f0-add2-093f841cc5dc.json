@@ -1,12 +1,12 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "DailyDashboard",
+    "title" : "History Dashboard",
     "image" : "tb-image;/api/images/system/assisted_living_administration_dashboard_widget_new_image_map_marker_image_0.svg",
     "mobileHide" : false,
     "mobileOrder" : null,
     "configuration" : {
-      "description" : "DailyDashboard for report",
+      "description" : "History Dashboard for report",
       "widgets" : {
         "779c53ab-caf4-1691-371b-90a5e3686623" : {
           "typeFullFqn" : "system.cards.timeseries_table",
@@ -245,7 +245,7 @@
         "dashboardCss" : ""
       }
     },
-    "name" : "DailyDashboard",
+    "name" : "History Dashboard",
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
