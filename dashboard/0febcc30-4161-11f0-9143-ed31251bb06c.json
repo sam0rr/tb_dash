@@ -2,7 +2,7 @@
   "entityType" : "DASHBOARD",
   "entity" : {
     "title" : "Device Detail View",
-    "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
+    "image" : "tb-image;/api/images/system/assisted_living_administration_dashboard_widget_new_image_map_marker_image_1.svg",
     "mobileHide" : true,
     "mobileOrder" : null,
     "configuration" : {
