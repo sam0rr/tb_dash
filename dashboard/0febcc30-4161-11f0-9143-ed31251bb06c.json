@@ -1076,7 +1076,7 @@
                 "autoFillHeight" : true,
                 "rowHeight" : 70,
                 "backgroundImageUrl" : null,
-                "mobileAutoFillHeight" : true,
+                "mobileAutoFillHeight" : false,
                 "mobileRowHeight" : 40
               }
             }
