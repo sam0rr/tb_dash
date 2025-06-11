@@ -20,54 +20,64 @@
               "type" : "entity",
               "entityAliasId" : "aa950966-4910-c8e6-1e0b-95af28e1e016",
               "dataKeys" : [ {
-                "name" : "defr",
-                "label" : "defr",
-                "type" : "timeseries",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.7988253103740612
-              }, {
-                "name" : "dig1",
-                "label" : "dig1",
-                "type" : "timeseries",
-                "color" : "#4caf50",
-                "settings" : { },
-                "_hash" : 0.415951028442771
-              }, {
-                "name" : "dig2",
-                "label" : "dig2",
-                "type" : "timeseries",
-                "color" : "#f44336",
-                "settings" : { },
-                "_hash" : 0.8257309745083392
-              }, {
-                "name" : "fans",
-                "label" : "fans",
-                "type" : "timeseries",
-                "color" : "#ffc107",
-                "settings" : { },
-                "_hash" : 0.5415914299614857
-              }, {
-                "name" : "refr",
-                "label" : "refr",
-                "type" : "timeseries",
-                "color" : "#607d8b",
-                "settings" : { },
-                "_hash" : 0.6972778939057747
-              }, {
                 "name" : "Temp1",
                 "label" : "Temp1",
                 "type" : "timeseries",
                 "color" : "#9c27b0",
                 "settings" : { },
-                "_hash" : 0.08866777205460474
+                "_hash" : 0.08866777205460474,
+                "units" : "°C",
+                "decimals" : 2
               }, {
                 "name" : "Temp2",
                 "label" : "Temp2",
                 "type" : "timeseries",
                 "color" : "#8bc34a",
                 "settings" : { },
-                "_hash" : 0.28335272368664943
+                "_hash" : 0.28335272368664943,
+                "units" : "°C",
+                "decimals" : 2
+              }, {
+                "name" : "fans",
+                "label" : "fans",
+                "type" : "timeseries",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.5415914299614857,
+                "decimals" : 0
+              }, {
+                "name" : "refr",
+                "label" : "refr",
+                "type" : "timeseries",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.6972778939057747,
+                "decimals" : 0
+              }, {
+                "name" : "defr",
+                "label" : "defr",
+                "type" : "timeseries",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.7988253103740612,
+                "units" : null,
+                "decimals" : 0
+              }, {
+                "name" : "dig1",
+                "label" : "dig1",
+                "type" : "timeseries",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.415951028442771,
+                "decimals" : 0
+              }, {
+                "name" : "dig2",
+                "label" : "dig2",
+                "type" : "timeseries",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8257309745083392,
+                "decimals" : 0
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
