@@ -542,7 +542,7 @@
               "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
-              "showValue" : true,
+              "showValue" : false,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
               "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
@@ -564,10 +564,11 @@
                 "weight" : "500"
               },
               "valueFont" : {
+                "size" : 13,
+                "sizeUnit" : "px",
                 "family" : "Roboto",
-                "style" : "normal",
                 "weight" : "500",
-                "size" : 32,
+                "style" : "normal",
                 "color" : "#000000"
               },
               "minMaxFont" : {
@@ -626,7 +627,7 @@
             "actions" : { },
             "enableDataExport" : true,
             "borderRadius" : null,
-            "units" : null,
+            "units" : "",
             "decimals" : null
           },
           "row" : 0,
@@ -1096,7 +1097,7 @@
               "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
-              "showValue" : true,
+              "showValue" : false,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
               "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
@@ -1248,7 +1249,7 @@
               "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
-              "showValue" : true,
+              "showValue" : false,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
               "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
@@ -1400,7 +1401,7 @@
               "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
-              "showValue" : true,
+              "showValue" : false,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
               "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
@@ -1552,7 +1553,7 @@
               "maxValue" : 1,
               "minValue" : 0,
               "donutStartAngle" : 90,
-              "showValue" : true,
+              "showValue" : false,
               "showMinMax" : true,
               "gaugeWidthScale" : 0.75,
               "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
@@ -1661,7 +1662,7 @@
                 "a48cb0d3-a520-ec40-b83a-ca460fde9ca8" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 0,
+                  "row" : 2,
                   "col" : 11
                 },
                 "4c5e5457-7ec0-7d71-5f77-2ef2a6d4ea7e" : {
@@ -1679,25 +1680,25 @@
                 "50fbf31d-af5e-b8cc-e643-df2317168908" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 5,
+                  "row" : 7,
                   "col" : 16
                 },
                 "646337b0-22c3-9c1d-c789-35040b8209ef" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 5,
+                  "row" : 7,
                   "col" : 21
                 },
                 "3918484b-18ab-026d-bc10-80c58fa6a8a9" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 5,
+                  "row" : 7,
                   "col" : 11
                 },
                 "11b4666b-c33a-27b8-513d-d63f1aea09ce" : {
                   "sizeX" : 5,
                   "sizeY" : 5,
-                  "row" : 0,
+                  "row" : 2,
                   "col" : 16
                 }
               },
