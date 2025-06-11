@@ -214,7 +214,7 @@
             "type" : "relationsQuery",
             "resolveMultiple" : true,
             "rootStateEntity" : true,
-            "stateEntityParamName" : null,
+            "stateEntityParamName" : "name",
             "defaultStateEntity" : {
               "entityType" : "DEVICE",
               "id" : "f9348de0-40b3-11f0-90ac-c38ddc901b1d"
