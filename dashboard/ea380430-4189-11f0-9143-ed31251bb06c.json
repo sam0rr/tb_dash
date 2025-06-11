@@ -147,11 +147,11 @@
                 "useShowWidgetActionFunction" : false,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
-                "targetDashboardStateId" : "default",
+                "targetDashboardStateId" : "",
                 "setEntityId" : true,
                 "stateEntityParamName" : null,
                 "openNewBrowserTab" : false,
-                "targetDashboardId" : "0febcc30-4161-11f0-9143-ed31251bb06c",
+                "targetDashboardId" : "b6ca4fa0-46f1-11f0-add2-093f841cc5dc",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "b9179f25-e079-5d17-a692-7e93c5fbb367"
