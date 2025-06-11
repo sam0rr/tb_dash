@@ -103,7 +103,7 @@
                 "settings" : { },
                 "_hash" : 0.12049668416568315,
                 "units" : "°C",
-                "decimals" : 0
+                "decimals" : 2
               }, {
                 "name" : "Temp2",
                 "type" : "timeseries",
@@ -112,7 +112,7 @@
                 "settings" : { },
                 "_hash" : 0.28855836984196814,
                 "units" : "°C",
-                "decimals" : 0
+                "decimals" : 2
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
