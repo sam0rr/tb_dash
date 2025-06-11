@@ -1073,10 +1073,10 @@
                 "backgroundSizeMode" : "cover",
                 "minColumns" : 24,
                 "viewFormat" : "grid",
-                "autoFillHeight" : false,
+                "autoFillHeight" : true,
                 "rowHeight" : 70,
-                "backgroundImageUrl" : "tb-image;/api/images/tenant/background.png",
-                "mobileAutoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : true,
                 "mobileRowHeight" : 40
               }
             }
@@ -1144,7 +1144,7 @@
         "titleColor" : "rgba(0,0,0,0.870588)",
         "showDashboardLogo" : false,
         "dashboardLogoUrl" : null,
-        "hideToolbar" : false,
+        "hideToolbar" : true,
         "showFilters" : true,
         "showUpdateDashboardImage" : true,
         "dashboardCss" : ""
