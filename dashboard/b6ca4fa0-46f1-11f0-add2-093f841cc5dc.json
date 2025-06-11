@@ -1731,7 +1731,7 @@
           "filter" : {
             "type" : "stateEntity",
             "resolveMultiple" : false,
-            "stateEntityParamName" : "deviceId",
+            "stateEntityParamName" : "",
             "defaultStateEntity" : {
               "entityType" : "DEVICE",
               "id" : "f9348de0-40b3-11f0-90ac-c38ddc901b1d"
