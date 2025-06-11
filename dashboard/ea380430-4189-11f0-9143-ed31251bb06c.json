@@ -140,12 +140,6 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
-              }, {
-                "name" : "Delete device",
-                "icon" : "delete",
-                "type" : "custom",
-                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\n\nopenDeleteDeviceDialog();\n\nfunction openDeleteDeviceDialog() {\n    let title = \"Are you sure you want to delete the device \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the device and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteDevice();\n            }\n        }\n    );\n}\n\nfunction deleteDevice() {\n    deviceService.deleteDevice(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n        }\n    );\n}\n",
-                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
               } ],
               "rowClick" : [ {
                 "name" : "Select Device",
