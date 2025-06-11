@@ -1187,7 +1187,7 @@
           "col" : 0,
           "id" : "50fbf31d-af5e-b8cc-e643-df2317168908"
         },
-        "1814fc96-52f2-27a2-4d01-d548032d838c" : {
+        "646337b0-22c3-9c1d-c789-35040b8209ef" : {
           "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
           "type" : "latest",
           "sizeX" : 2,
@@ -1198,12 +1198,12 @@
               "name" : "",
               "entityAliasId" : "16714a49-f551-87f5-ca79-684ee6611c46",
               "dataKeys" : [ {
-                "name" : "fans",
+                "name" : "dig2",
                 "type" : "timeseries",
-                "label" : "fans",
+                "label" : "dig2",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.5982725636156885
+                "_hash" : 0.020907031027105893
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1286,10 +1286,10 @@
               "neonGlowBrightness" : 0,
               "dashThickness" : 0,
               "decimals" : 0,
-              "gaugeColor" : "#FFFFFF",
+              "gaugeColor" : "#FF0000",
               "gaugeType" : "arc",
               "showTitle" : true,
-              "title" : "Fan",
+              "title" : "Digital Input 2",
               "barColor" : {
                 "type" : "gradient",
                 "color" : "#2196f3",
@@ -1332,164 +1332,12 @@
             "actions" : { },
             "enableDataExport" : true,
             "borderRadius" : null,
-            "units" : null,
+            "units" : "",
             "decimals" : null
           },
           "row" : 0,
           "col" : 0,
-          "id" : "1814fc96-52f2-27a2-4d01-d548032d838c"
-        },
-        "c065b85b-d2e4-127c-9d01-c897a0cb3cf1" : {
-          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
-          "type" : "latest",
-          "sizeX" : 2,
-          "sizeY" : 2,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entity",
-              "name" : "",
-              "entityAliasId" : "16714a49-f551-87f5-ca79-684ee6611c46",
-              "dataKeys" : [ {
-                "name" : "fans",
-                "type" : "timeseries",
-                "label" : "fans",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.5982725636156885
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1748969318076,
-                  "endTimeMs" : 1749055718076
-                },
-                "quickInterval" : "CURRENT_DAY",
-                "hideInterval" : false,
-                "hideLastInterval" : false,
-                "hideFixedInterval" : false,
-                "hideQuickInterval" : false
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "#FFFFFF",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "maxValue" : 1,
-              "minValue" : 0,
-              "donutStartAngle" : 90,
-              "showValue" : true,
-              "showMinMax" : true,
-              "gaugeWidthScale" : 0.75,
-              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
-              "refreshAnimationType" : ">",
-              "refreshAnimationTime" : 700,
-              "startAnimationType" : ">",
-              "startAnimationTime" : 700,
-              "titleFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "style" : "normal",
-                "weight" : "500",
-                "color" : "#000000"
-              },
-              "labelFont" : {
-                "family" : "Roboto",
-                "size" : 8,
-                "style" : "normal",
-                "weight" : "500"
-              },
-              "valueFont" : {
-                "family" : "Roboto",
-                "style" : "normal",
-                "weight" : "500",
-                "size" : 32,
-                "color" : "#000000"
-              },
-              "minMaxFont" : {
-                "family" : "Segment7Standard",
-                "size" : 12,
-                "style" : "normal",
-                "weight" : "500",
-                "color" : null
-              },
-              "neonGlowBrightness" : 0,
-              "dashThickness" : 0,
-              "decimals" : 0,
-              "gaugeColor" : "#FFFFFF",
-              "gaugeType" : "arc",
-              "showTitle" : true,
-              "title" : "Fan",
-              "barColor" : {
-                "type" : "gradient",
-                "color" : "#2196f3",
-                "gradient" : {
-                  "advancedMode" : false,
-                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
-                  "gradientAdvanced" : [ {
-                    "source" : {
-                      "type" : "constant"
-                    },
-                    "color" : "rgba(0, 255, 0, 1)"
-                  }, {
-                    "source" : {
-                      "type" : "constant"
-                    },
-                    "color" : "rgba(255, 0, 0, 1)"
-                  } ],
-                  "minValue" : 0,
-                  "maxValue" : 1
-                },
-                "rangeList" : {
-                  "advancedMode" : false,
-                  "range" : [ ],
-                  "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
-              },
-              "useFixedLevelColor" : false
-            },
-            "title" : "Simple gauge",
-            "dropShadow" : true,
-            "enableFullscreen" : true,
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "configMode" : "basic",
-            "useDashboardTimewindow" : true,
-            "displayTimewindow" : true,
-            "actions" : { },
-            "enableDataExport" : true,
-            "borderRadius" : null,
-            "units" : null,
-            "decimals" : null
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "c065b85b-d2e4-127c-9d01-c897a0cb3cf1"
+          "id" : "646337b0-22c3-9c1d-c789-35040b8209ef"
         }
       },
       "states" : {
@@ -1510,16 +1358,16 @@
                   "sizeX" : 4,
                   "sizeY" : 4,
                   "row" : 0,
-                  "col" : 7
+                  "col" : 11
                 },
                 "4c5e5457-7ec0-7d71-5f77-2ef2a6d4ea7e" : {
-                  "sizeX" : 7,
+                  "sizeX" : 11,
                   "sizeY" : 2,
                   "row" : 0,
                   "col" : 0
                 },
                 "98916acd-6b17-5903-81c2-60d3b9662c64" : {
-                  "sizeX" : 7,
+                  "sizeX" : 11,
                   "sizeY" : 2,
                   "row" : 2,
                   "col" : 0
@@ -1527,20 +1375,14 @@
                 "50fbf31d-af5e-b8cc-e643-df2317168908" : {
                   "sizeX" : 4,
                   "sizeY" : 4,
-                  "row" : 0,
-                  "col" : 11
-                },
-                "1814fc96-52f2-27a2-4d01-d548032d838c" : {
-                  "sizeX" : 4,
-                  "sizeY" : 4,
-                  "row" : 0,
+                  "row" : 4,
                   "col" : 15
                 },
-                "c065b85b-d2e4-127c-9d01-c897a0cb3cf1" : {
+                "646337b0-22c3-9c1d-c789-35040b8209ef" : {
                   "sizeX" : 4,
                   "sizeY" : 4,
-                  "row" : 0,
-                  "col" : 19
+                  "row" : 4,
+                  "col" : 11
                 }
               },
               "gridSettings" : {
