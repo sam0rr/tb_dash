@@ -1,0 +1,27 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Unique Device",
+    "image" : "tb-image;/api/images/system/fuel_level_monitoring_dashboard_widget_filter_custom_icon_(3).svg",
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Unique Device Data"
+    },
+    "name" : "Unique Device",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "f9bd3d30-4706-11f0-add2-093f841cc5dc"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
