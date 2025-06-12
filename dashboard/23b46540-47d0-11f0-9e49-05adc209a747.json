@@ -1,12 +1,12 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Device Detail View",
+    "title" : "Clickable Device View",
     "image" : "tb-image;/api/images/system/assisted_living_administration_dashboard_widget_new_image_map_marker_image_1.svg",
     "mobileHide" : true,
     "mobileOrder" : null,
     "configuration" : {
-      "description" : "Device Detail View",
+      "description" : "Clickable Device View",
       "widgets" : {
         "4528960d-1513-8cbe-4801-def9bdb3b6e7" : {
           "typeFullFqn" : "system.cards.horizontal_value_card",
@@ -1791,7 +1791,7 @@
         "dashboardCss" : ""
       }
     },
-    "name" : "Device Detail View",
+    "name" : "Clickable Device View",
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
