@@ -1729,20 +1729,10 @@
           "id" : "16714a49-f551-87f5-ca79-684ee6611c46",
           "alias" : "Selected Device",
           "filter" : {
-            "type" : "deviceSearchQuery",
-            "resolveMultiple" : true,
-            "rootStateEntity" : true,
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
             "stateEntityParamName" : null,
-            "defaultStateEntity" : {
-              "entityType" : "DEVICE",
-              "id" : "49d86ed0-4152-11f0-9143-ed31251bb06c"
-            },
-            "rootEntity" : null,
-            "direction" : "FROM",
-            "maxLevel" : 1,
-            "fetchLastLevelOnly" : false,
-            "relationType" : "Contains",
-            "deviceTypes" : [ "Régéthermic Remote Server" ]
+            "defaultStateEntity" : null
           }
         }
       },
