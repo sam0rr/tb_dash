@@ -145,7 +145,7 @@
                 "type" : "openDashboard",
                 "targetDashboardStateId" : "default",
                 "setEntityId" : true,
-                "stateEntityParamName" : "name",
+                "stateEntityParamName" : "entityId",
                 "openNewBrowserTab" : false,
                 "targetDashboardId" : "ea380430-4189-11f0-9143-ed31251bb06c",
                 "openInSeparateDialog" : false,
