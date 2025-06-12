@@ -1732,10 +1732,7 @@
             "type" : "stateEntity",
             "resolveMultiple" : false,
             "stateEntityParamName" : "entityId",
-            "defaultStateEntity" : {
-              "entityType" : "DEVICE",
-              "id" : "49d86ed0-4152-11f0-9143-ed31251bb06c"
-            }
+            "defaultStateEntity" : null
           }
         }
       },
