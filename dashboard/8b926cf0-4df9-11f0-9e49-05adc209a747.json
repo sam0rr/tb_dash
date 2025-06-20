@@ -1206,7 +1206,7 @@
             "enableFullscreen" : true,
             "titleStyle" : null,
             "mobileHeight" : null,
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "actions" : { },
             "showTitleIcon" : false,
             "titleIcon" : "thermostat",
@@ -1263,18 +1263,20 @@
             "main" : {
               "widgets" : {
                 "74e3dba2-f13e-60ca-46af-ed8f279157c9" : {
-                  "sizeX" : 12,
-                  "sizeY" : 12,
+                  "sizeX" : 20,
+                  "sizeY" : 11,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 0
                 },
                 "97d4922a-ef7a-4e71-07a5-cc0f4739240c" : {
-                  "sizeX" : 12,
+                  "sizeX" : 20,
                   "sizeY" : 4,
                   "mobileHeight" : null,
-                  "row" : 0,
-                  "col" : 12
+                  "row" : 11,
+                  "col" : 0,
+                  "resizable" : true,
+                  "preserveAspectRatio" : true
                 }
               },
               "gridSettings" : {
