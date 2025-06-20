@@ -1,0 +1,27 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Chart Telemetry Detail View",
+    "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
+    "mobileHide" : true,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Chart Telemetry Detail View"
+    },
+    "name" : "Chart Telemetry Detail View",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "1589e740-4df9-11f0-8baa-c9d27140f93d"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
