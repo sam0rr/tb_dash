@@ -153,7 +153,7 @@
                 }
               },
               "autoScale" : true,
-              "padding" : ""
+              "padding" : "40"
             },
             "title" : "Horizontal value card",
             "dropShadow" : true,
@@ -170,10 +170,11 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "Hisotry",
-                "buttonType" : "basic",
+                "buttonType" : "raised",
                 "showIcon" : true,
                 "icon" : "open_in_new",
-                "buttonColor" : "#FF0000",
+                "buttonColor" : "#ffffff",
+                "buttonFillColor" : "#F44336",
                 "useShowWidgetActionFunction" : false,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
