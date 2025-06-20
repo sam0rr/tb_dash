@@ -22,7 +22,7 @@
                 "name" : "Temp1",
                 "type" : "timeseries",
                 "label" : "Temperature 1",
-                "color" : "#2196f3",
+                "color" : "#F44336",
                 "settings" : { },
                 "_hash" : 0.8358385230499613
               } ],
@@ -64,7 +64,7 @@
             "showTitle" : false,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
+            "padding" : "200px",
             "settings" : {
               "labelPosition" : "top",
               "layout" : "horizontal",
@@ -190,7 +190,7 @@
             },
             "configMode" : "advanced",
             "displayTimewindow" : true,
-            "margin" : "0px",
+            "margin" : "200px",
             "borderRadius" : "0px",
             "widgetCss" : "",
             "pageSize" : 1024,
@@ -1205,7 +1205,7 @@
                   "row" : 0,
                   "col" : 0,
                   "resizable" : true,
-                  "mobileHeight" : 300
+                  "mobileHeight" : null
                 },
                 "27014afe-f94e-c2c4-51bd-cf0fd68a7858" : {
                   "sizeX" : 12,
