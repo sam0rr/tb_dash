@@ -178,7 +178,7 @@
                 "icon" : "open_in_new",
                 "buttonColor" : "#ffffff",
                 "buttonFillColor" : "#F44336",
-                "useShowWidgetActionFunction" : false,
+                "useShowWidgetActionFunction" : true,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
                 "targetDashboardStateId" : "default",
