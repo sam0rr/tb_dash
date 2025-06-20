@@ -614,7 +614,7 @@
               }, {
                 "name" : "refr",
                 "type" : "timeseries",
-                "label" : "refr",
+                "label" : "Compressor",
                 "color" : "#048AD3",
                 "settings" : {
                   "yAxisId" : "default",
@@ -690,7 +690,7 @@
               }, {
                 "name" : "defr",
                 "type" : "timeseries",
-                "label" : "defr",
+                "label" : "Defrost",
                 "color" : "#4CAF50",
                 "settings" : {
                   "yAxisId" : "default",
@@ -766,7 +766,7 @@
               }, {
                 "name" : "dig1",
                 "type" : "timeseries",
-                "label" : "dig1",
+                "label" : "Digital Input 1",
                 "color" : "#E89623",
                 "settings" : {
                   "yAxisId" : "default",
@@ -842,7 +842,7 @@
               }, {
                 "name" : "dig2",
                 "type" : "timeseries",
-                "label" : "dig2",
+                "label" : "Digital Input 2",
                 "color" : "#9C27B0",
                 "settings" : {
                   "yAxisId" : "default",
@@ -937,8 +937,8 @@
               },
               "history" : {
                 "historyType" : 0,
-                "interval" : 1800000,
-                "timewindowMs" : 604800000,
+                "interval" : 3600000,
+                "timewindowMs" : 1209600000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750354639774,
                   "endTimeMs" : 1750441039774
