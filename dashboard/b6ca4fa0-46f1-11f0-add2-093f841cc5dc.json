@@ -64,7 +64,7 @@
             "showTitle" : false,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "200px",
+            "padding" : "100px",
             "settings" : {
               "labelPosition" : "top",
               "layout" : "horizontal",
@@ -190,7 +190,7 @@
             },
             "configMode" : "advanced",
             "displayTimewindow" : true,
-            "margin" : "200px",
+            "margin" : "0px",
             "borderRadius" : "0px",
             "widgetCss" : "",
             "pageSize" : 1024,
