@@ -167,7 +167,25 @@
             "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
-            "actions" : { },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Hisotry",
+                "buttonType" : "icon",
+                "icon" : "open_in_new",
+                "buttonColor" : null,
+                "useShowWidgetActionFunction" : false,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "default",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "c6ffd7a0-4df4-11f0-9e49-05adc209a747",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "d2d6d46a-f795-e8d4-0e35-e096f26409ba"
+              } ]
+            },
             "configMode" : "basic",
             "displayTimewindow" : true,
             "margin" : "0px",
