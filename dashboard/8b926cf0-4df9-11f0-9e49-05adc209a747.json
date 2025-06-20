@@ -15,9 +15,10 @@
           "sizeY" : 5,
           "config" : {
             "datasources" : [ {
-              "type" : "device",
+              "type" : "entity",
               "name" : "",
               "deviceId" : "49d86ed0-4152-11f0-9143-ed31251bb06c",
+              "entityAliasId" : "0d84ec91-c05c-7639-43de-aa9c062e3e34",
               "dataKeys" : [ {
                 "name" : "Temp1",
                 "type" : "timeseries",
@@ -95,6 +96,83 @@
                 "_hash" : 0.5499168495233644,
                 "units" : "°C",
                 "decimals" : 2
+              }, {
+                "name" : "Temp2",
+                "type" : "timeseries",
+                "label" : "Temp2",
+                "color" : "#048AD3",
+                "settings" : {
+                  "yAxisId" : "default",
+                  "showInLegend" : true,
+                  "dataHiddenByDefault" : false,
+                  "type" : "line",
+                  "lineSettings" : {
+                    "showLine" : true,
+                    "step" : false,
+                    "stepType" : "start",
+                    "smooth" : false,
+                    "lineType" : "solid",
+                    "lineWidth" : 2,
+                    "showPoints" : false,
+                    "showPointLabel" : false,
+                    "pointLabelPosition" : "top",
+                    "pointLabelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "pointLabelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enablePointLabelBackground" : false,
+                    "pointLabelBackground" : "rgba(255,255,255,0.56)",
+                    "pointShape" : "emptyCircle",
+                    "pointSize" : 4,
+                    "fillAreaSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "barSettings" : {
+                    "showBorder" : false,
+                    "borderWidth" : 2,
+                    "borderRadius" : 0,
+                    "showLabel" : false,
+                    "labelPosition" : "top",
+                    "labelFont" : {
+                      "family" : "Roboto",
+                      "size" : 11,
+                      "sizeUnit" : "px",
+                      "style" : "normal",
+                      "weight" : "400",
+                      "lineHeight" : "1"
+                    },
+                    "labelColor" : "rgba(0, 0, 0, 0.76)",
+                    "enableLabelBackground" : false,
+                    "labelBackground" : "rgba(255,255,255,0.56)",
+                    "backgroundSettings" : {
+                      "type" : "none",
+                      "opacity" : 0.4,
+                      "gradient" : {
+                        "start" : 100,
+                        "end" : 0
+                      }
+                    }
+                  },
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : false,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  }
+                },
+                "_hash" : 0.6122798716960451,
+                "units" : "°C",
+                "decimals" : 2
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -142,6 +220,7 @@
             "settings" : {
               "showLegend" : true,
               "legendConfig" : {
+                "direction" : "column",
                 "position" : "top",
                 "sortDataKeys" : true,
                 "showMin" : false,
@@ -473,7 +552,21 @@
           }
         }
       },
-      "entityAliases" : { },
+      "entityAliases" : {
+        "0d84ec91-c05c-7639-43de-aa9c062e3e34" : {
+          "id" : "0d84ec91-c05c-7639-43de-aa9c062e3e34",
+          "alias" : "Selected Device",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "entityId",
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "49d86ed0-4152-11f0-9143-ed31251bb06c"
+            }
+          }
+        }
+      },
       "filters" : { },
       "timewindow" : {
         "displayValue" : "",
