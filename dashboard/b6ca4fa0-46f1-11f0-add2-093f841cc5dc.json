@@ -67,7 +67,7 @@
             "padding" : "0px",
             "settings" : {
               "labelPosition" : "top",
-              "layout" : "horizontal_reversed",
+              "layout" : "horizontal",
               "showLabel" : true,
               "labelFont" : {
                 "family" : "Roboto",
@@ -153,7 +153,7 @@
                 }
               },
               "autoScale" : true,
-              "padding" : ""
+              "padding" : "60"
             },
             "title" : "Horizontal value card",
             "dropShadow" : true,
