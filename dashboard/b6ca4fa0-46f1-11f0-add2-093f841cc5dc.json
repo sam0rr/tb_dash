@@ -170,11 +170,11 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "Hisotry",
-                "buttonType" : "stroked",
+                "buttonType" : "flat",
                 "showIcon" : true,
                 "icon" : "open_in_new",
-                "buttonColor" : "var(--tb-primary-500)",
-                "buttonBorderColor" : "#0000001F",
+                "buttonColor" : "#ffffff",
+                "buttonFillColor" : "var(--tb-primary-500)",
                 "useShowWidgetActionFunction" : false,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
