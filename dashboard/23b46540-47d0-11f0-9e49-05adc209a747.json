@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Clickable Device View",
+    "title" : "Clickableeeee Device View",
     "image" : "tb-image;/api/images/system/assisted_living_administration_dashboard_widget_new_image_map_marker_image_1.svg",
     "mobileHide" : true,
     "mobileOrder" : null,
@@ -1788,7 +1788,7 @@
         "dashboardCss" : ""
       }
     },
-    "name" : "Clickable Device View",
+    "name" : "Clickableeeee Device View",
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
