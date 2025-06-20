@@ -1004,7 +1004,7 @@
               },
               "thresholds" : [ ],
               "dataZoom" : false,
-              "stack" : true,
+              "stack" : false,
               "xAxis" : {
                 "show" : true,
                 "label" : "",
@@ -1060,8 +1060,7 @@
               },
               "legendLabelColor" : "rgba(0, 0, 0, 0.76)",
               "legendConfig" : {
-                "direction" : "column",
-                "position" : "right",
+                "position" : "top",
                 "sortDataKeys" : false,
                 "showMin" : false,
                 "showMax" : false,
@@ -1272,7 +1271,7 @@
                 },
                 "97d4922a-ef7a-4e71-07a5-cc0f4739240c" : {
                   "sizeX" : 12,
-                  "sizeY" : 12,
+                  "sizeY" : 4,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 12
