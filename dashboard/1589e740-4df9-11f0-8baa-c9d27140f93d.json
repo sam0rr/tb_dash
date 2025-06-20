@@ -169,9 +169,11 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "History",
-                "buttonType" : "icon",
+                "buttonType" : "raised",
+                "showIcon" : true,
                 "icon" : "open_in_new",
-                "buttonColor" : null,
+                "buttonColor" : "#ffffff",
+                "buttonFillColor" : "#F44336",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
@@ -387,9 +389,11 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "History",
-                "buttonType" : "icon",
+                "buttonType" : "raised",
+                "showIcon" : true,
                 "icon" : "open_in_new",
-                "buttonColor" : null,
+                "buttonColor" : "#ffffff",
+                "buttonFillColor" : "#F44336",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
