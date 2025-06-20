@@ -230,7 +230,7 @@
                 "showLatest" : false
               },
               "thresholds" : [ ],
-              "dataZoom" : false,
+              "dataZoom" : true,
               "stack" : false,
               "yAxis" : {
                 "show" : true,
