@@ -22,7 +22,7 @@
               "dataKeys" : [ {
                 "name" : "Temp1",
                 "type" : "timeseries",
-                "label" : "Temp1",
+                "label" : "Temperature 1",
                 "color" : "#F44336",
                 "settings" : {
                   "yAxisId" : "default",
@@ -99,7 +99,7 @@
               }, {
                 "name" : "Temp2",
                 "type" : "timeseries",
-                "label" : "Temp2",
+                "label" : "Temperature 2",
                 "color" : "#048AD3",
                 "settings" : {
                   "yAxisId" : "default",
@@ -220,9 +220,8 @@
             "settings" : {
               "showLegend" : true,
               "legendConfig" : {
-                "direction" : "column",
                 "position" : "top",
-                "sortDataKeys" : true,
+                "sortDataKeys" : false,
                 "showMin" : false,
                 "showMax" : false,
                 "showAvg" : true,
@@ -440,8 +439,8 @@
               "grid" : {
                 "show" : true,
                 "backgroundColor" : null,
-                "borderWidth" : 1,
-                "borderColor" : "#ccc"
+                "borderWidth" : 3,
+                "borderColor" : "#000000"
               },
               "legendColumnTitleFont" : {
                 "family" : "Roboto",
@@ -1042,8 +1041,8 @@
               "grid" : {
                 "show" : true,
                 "backgroundColor" : null,
-                "borderWidth" : 1,
-                "borderColor" : "#ccc"
+                "borderWidth" : 3,
+                "borderColor" : "#000000"
               },
               "xAxis" : {
                 "show" : true,
@@ -1118,7 +1117,6 @@
               },
               "legendValueColor" : "rgba(0, 0, 0, 0.87)",
               "legendConfig" : {
-                "direction" : "column",
                 "position" : "top",
                 "sortDataKeys" : false,
                 "showMin" : false,
@@ -1128,7 +1126,7 @@
                 "showLatest" : false
               },
               "showTooltip" : true,
-              "tooltipTrigger" : "axis",
+              "tooltipTrigger" : "point",
               "tooltipLabelFont" : {
                 "family" : "Roboto",
                 "size" : 12,
@@ -1207,7 +1205,7 @@
             "enableFullscreen" : true,
             "titleStyle" : null,
             "mobileHeight" : null,
-            "configMode" : "advanced",
+            "configMode" : "basic",
             "actions" : { },
             "showTitleIcon" : false,
             "titleIcon" : "thermostat",
