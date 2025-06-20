@@ -153,7 +153,7 @@
                 }
               },
               "autoScale" : true,
-              "padding" : "60"
+              "padding" : ""
             },
             "title" : "Horizontal value card",
             "dropShadow" : true,
@@ -188,7 +188,7 @@
                 "id" : "d2d6d46a-f795-e8d4-0e35-e096f26409ba"
               } ]
             },
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "displayTimewindow" : true,
             "margin" : "0px",
             "borderRadius" : "0px",
@@ -1203,7 +1203,9 @@
                   "sizeX" : 12,
                   "sizeY" : 2,
                   "row" : 0,
-                  "col" : 0
+                  "col" : 0,
+                  "resizable" : true,
+                  "mobileHeight" : 50
                 },
                 "27014afe-f94e-c2c4-51bd-cf0fd68a7858" : {
                   "sizeX" : 12,
