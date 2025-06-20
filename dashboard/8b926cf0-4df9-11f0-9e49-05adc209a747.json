@@ -1263,8 +1263,8 @@
             "main" : {
               "widgets" : {
                 "74e3dba2-f13e-60ca-46af-ed8f279157c9" : {
-                  "sizeX" : 20,
-                  "sizeY" : 11,
+                  "sizeX" : 19,
+                  "sizeY" : 10,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 0
