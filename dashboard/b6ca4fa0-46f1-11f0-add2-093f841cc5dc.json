@@ -782,7 +782,7 @@
               "dataKeys" : [ {
                 "name" : "Temp1",
                 "type" : "timeseries",
-                "label" : "Temperature",
+                "label" : "Temp1",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.08700198230612144
@@ -828,7 +828,7 @@
             "padding" : "0px",
             "settings" : {
               "labelPosition" : "top",
-              "layout" : "square",
+              "layout" : "centered",
               "showLabel" : true,
               "labelFont" : {
                 "family" : "Roboto",
@@ -912,7 +912,7 @@
                   "blur" : 3
                 }
               },
-              "autoScale" : true,
+              "autoScale" : false,
               "padding" : ""
             },
             "title" : "Value card",
@@ -932,7 +932,7 @@
                 "name" : "History",
                 "buttonType" : "raised",
                 "showIcon" : true,
-                "icon" : "more_horiz",
+                "icon" : "open_in_new",
                 "buttonColor" : "#ffffff",
                 "buttonFillColor" : "#F44336",
                 "useShowWidgetActionFunction" : null,
@@ -989,7 +989,7 @@
           "col" : 0,
           "id" : "e1257103-0490-2f89-2e8a-e34869a9de28"
         },
-        "5f24b304-4c39-0493-5e6e-1b73df7694d2" : {
+        "41737187-895a-aff7-ca9c-311e8099418c" : {
           "typeFullFqn" : "system.cards.value_card",
           "type" : "latest",
           "sizeX" : 3,
@@ -1000,12 +1000,12 @@
               "name" : "",
               "entityAliasId" : "16714a49-f551-87f5-ca79-684ee6611c46",
               "dataKeys" : [ {
-                "name" : "Temp1",
+                "name" : "Temp2",
                 "type" : "timeseries",
-                "label" : "Temperature",
+                "label" : "Temp2",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.08700198230612144
+                "_hash" : 0.8536546789269027
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1048,7 +1048,7 @@
             "padding" : "0px",
             "settings" : {
               "labelPosition" : "top",
-              "layout" : "square",
+              "layout" : "centered",
               "showLabel" : true,
               "labelFont" : {
                 "family" : "Roboto",
@@ -1132,7 +1132,7 @@
                   "blur" : 3
                 }
               },
-              "autoScale" : true,
+              "autoScale" : false,
               "padding" : ""
             },
             "title" : "Value card",
@@ -1152,7 +1152,7 @@
                 "name" : "History",
                 "buttonType" : "raised",
                 "showIcon" : true,
-                "icon" : "more_horiz",
+                "icon" : "open_in_new",
                 "buttonColor" : "#ffffff",
                 "buttonFillColor" : "#F44336",
                 "useShowWidgetActionFunction" : null,
@@ -1207,7 +1207,7 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "5f24b304-4c39-0493-5e6e-1b73df7694d2"
+          "id" : "41737187-895a-aff7-ca9c-311e8099418c"
         }
       },
       "states" : {
@@ -1220,42 +1220,42 @@
                 "8b21be58-cbd8-e73b-1734-ebd0aead6fdb" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 4,
+                  "row" : 6,
                   "col" : 0
                 },
                 "fc9f16b7-eff3-310d-27a4-6acd3c77ceb3" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 4,
+                  "row" : 6,
                   "col" : 6
                 },
                 "b303b7db-dca2-e23d-1064-e384d9c59a03" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 10,
+                  "row" : 12,
                   "col" : 0
                 },
                 "615687ad-a7c4-079f-6b38-1cfa336ec852" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 10,
+                  "row" : 12,
                   "col" : 6
                 },
                 "d6687831-6770-4137-9a28-3ef026e1ebae" : {
                   "sizeX" : 6,
                   "sizeY" : 6,
-                  "row" : 4,
+                  "row" : 6,
                   "col" : 12
                 },
                 "e1257103-0490-2f89-2e8a-e34869a9de28" : {
                   "sizeX" : 6,
-                  "sizeY" : 4,
+                  "sizeY" : 6,
                   "row" : 0,
                   "col" : 0
                 },
-                "5f24b304-4c39-0493-5e6e-1b73df7694d2" : {
+                "41737187-895a-aff7-ca9c-311e8099418c" : {
                   "sizeX" : 6,
-                  "sizeY" : 4,
+                  "sizeY" : 6,
                   "row" : 0,
                   "col" : 6
                 }
