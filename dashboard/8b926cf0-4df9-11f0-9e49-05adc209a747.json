@@ -1263,15 +1263,15 @@
             "main" : {
               "widgets" : {
                 "74e3dba2-f13e-60ca-46af-ed8f279157c9" : {
-                  "sizeX" : 20,
+                  "sizeX" : 24,
                   "sizeY" : 11,
                   "mobileHeight" : null,
                   "row" : 0,
                   "col" : 0
                 },
                 "97d4922a-ef7a-4e71-07a5-cc0f4739240c" : {
-                  "sizeX" : 20,
-                  "sizeY" : 4,
+                  "sizeX" : 24,
+                  "sizeY" : 4.8,
                   "mobileHeight" : null,
                   "row" : 11,
                   "col" : 0,
