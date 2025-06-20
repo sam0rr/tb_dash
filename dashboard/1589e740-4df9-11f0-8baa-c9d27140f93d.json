@@ -194,7 +194,7 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "enableDataExport" : false,
+            "enableDataExport" : true,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
@@ -414,7 +414,7 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "enableDataExport" : false,
+            "enableDataExport" : true,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
@@ -583,7 +583,7 @@
             },
             "title" : "Simple gauge",
             "dropShadow" : true,
-            "enableFullscreen" : true,
+            "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -735,7 +735,7 @@
             },
             "title" : "Simple gauge",
             "dropShadow" : true,
-            "enableFullscreen" : true,
+            "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -887,7 +887,7 @@
             },
             "title" : "Simple gauge",
             "dropShadow" : true,
-            "enableFullscreen" : true,
+            "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -1039,7 +1039,7 @@
             },
             "title" : "Simple gauge",
             "dropShadow" : true,
-            "enableFullscreen" : true,
+            "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -1191,7 +1191,7 @@
             },
             "title" : "Simple gauge",
             "dropShadow" : true,
-            "enableFullscreen" : true,
+            "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
