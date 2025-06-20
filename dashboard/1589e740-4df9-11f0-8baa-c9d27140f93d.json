@@ -169,19 +169,17 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "History",
-                "buttonType" : "raised",
-                "showIcon" : true,
+                "buttonType" : "icon",
                 "icon" : "open_in_new",
-                "buttonColor" : "#ffffff",
-                "buttonFillColor" : "#F44336",
+                "buttonColor" : null,
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "openDashboard",
-                "targetDashboardStateId" : "default",
+                "targetDashboardStateId" : "",
                 "setEntityId" : true,
                 "stateEntityParamName" : null,
                 "openNewBrowserTab" : false,
-                "targetDashboardId" : "c6ffd7a0-4df4-11f0-9e49-05adc209a747",
+                "targetDashboardId" : "8b926cf0-4df9-11f0-9e49-05adc209a747",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "bac8d90a-e3f3-ba0b-02f1-26ca500fbafa"
