@@ -709,7 +709,7 @@
               },
               "history" : {
                 "historyType" : 0,
-                "interval" : 1800000,
+                "interval" : 3600000,
                 "timewindowMs" : 604800000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750354639774,
