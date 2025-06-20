@@ -1,12 +1,12 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Chart Telemetry Detail View",
+    "title" : "Device Detail View",
     "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
     "mobileHide" : true,
     "mobileOrder" : null,
     "configuration" : {
-      "description" : "Chart Telemetry Detail View",
+      "description" : "Device Detail View",
       "widgets" : {
         "26748a15-fc5a-0ee7-d33f-bff3022d3c8b" : {
           "typeFullFqn" : "system.cards.value_card",
@@ -1332,7 +1332,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Chart Telemetry Detail View",
+    "name" : "Device Detail View",
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
