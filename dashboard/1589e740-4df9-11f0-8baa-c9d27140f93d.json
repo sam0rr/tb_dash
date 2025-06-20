@@ -194,7 +194,7 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
@@ -414,7 +414,7 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "titleFont" : {
@@ -592,7 +592,7 @@
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "actions" : { },
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "borderRadius" : null,
             "units" : "",
             "decimals" : 0
@@ -744,7 +744,7 @@
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "actions" : { },
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "borderRadius" : null,
             "units" : null,
             "decimals" : null
@@ -896,7 +896,7 @@
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "actions" : { },
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "borderRadius" : null,
             "units" : null,
             "decimals" : null
@@ -1048,7 +1048,7 @@
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "actions" : { },
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "borderRadius" : null,
             "units" : "",
             "decimals" : null
@@ -1200,7 +1200,7 @@
             "useDashboardTimewindow" : true,
             "displayTimewindow" : true,
             "actions" : { },
-            "enableDataExport" : true,
+            "enableDataExport" : false,
             "borderRadius" : null,
             "units" : "",
             "decimals" : null
