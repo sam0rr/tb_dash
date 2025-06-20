@@ -563,6 +563,767 @@
           "row" : 0,
           "col" : 0,
           "id" : "15199453-0999-4316-efc1-b5f6dd4c6ab9"
+        },
+        "a9d241bb-70af-7d7b-9221-45e6a0662349" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "fans",
+                "type" : "timeseries",
+                "label" : "fans",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5982725636156885
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "500",
+                "style" : "normal",
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Fans",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : 0
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "a9d241bb-70af-7d7b-9221-45e6a0662349"
+        },
+        "c4c140d1-960b-7f30-4dea-92036a5b3c93" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "refr",
+                "type" : "timeseries",
+                "label" : "refr",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8167417579149736
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Compressor Status",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : null,
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c4c140d1-960b-7f30-4dea-92036a5b3c93"
+        },
+        "b0774bdf-ce98-c58b-e877-391da59ad904" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "defr",
+                "type" : "timeseries",
+                "label" : "defr",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.2873958380601337
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Defrost Status",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : null,
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b0774bdf-ce98-c58b-e877-391da59ad904"
+        },
+        "204471a6-6ac3-cd67-4dc4-58c534450b5e" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "dig1",
+                "type" : "timeseries",
+                "label" : "dig1",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5138880461649568
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Digital Input 1",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "204471a6-6ac3-cd67-4dc4-58c534450b5e"
+        },
+        "c5ec0369-97b1-1821-b8e5-a5a597e217ef" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "dig2",
+                "type" : "timeseries",
+                "label" : "dig2",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.020907031027105893
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Digital Input 2",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c5ec0369-97b1-1821-b8e5-a5a597e217ef"
         }
       },
       "states" : {
@@ -591,6 +1352,36 @@
                   "sizeY" : 4,
                   "row" : 0,
                   "col" : 16
+                },
+                "a9d241bb-70af-7d7b-9221-45e6a0662349" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 0
+                },
+                "c4c140d1-960b-7f30-4dea-92036a5b3c93" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 8
+                },
+                "b0774bdf-ce98-c58b-e877-391da59ad904" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 16
+                },
+                "204471a6-6ac3-cd67-4dc4-58c534450b5e" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 0
+                },
+                "c5ec0369-97b1-1821-b8e5-a5a597e217ef" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 8
                 }
               },
               "gridSettings" : {
