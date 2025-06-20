@@ -1004,7 +1004,7 @@
               },
               "thresholds" : [ ],
               "dataZoom" : false,
-              "stack" : false,
+              "stack" : true,
               "xAxis" : {
                 "show" : true,
                 "label" : "",
