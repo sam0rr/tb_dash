@@ -167,25 +167,7 @@
             "showLegend" : false,
             "widgetStyle" : { },
             "actions" : {
-              "headerButton" : [ {
-                "name" : "History",
-                "buttonType" : "raised",
-                "showIcon" : true,
-                "icon" : "open_in_new",
-                "buttonColor" : "#ffffff",
-                "buttonFillColor" : "#F44336",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
-                "targetDashboardStateId" : "default",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "8b926cf0-4df9-11f0-9e49-05adc209a747",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "bac8d90a-e3f3-ba0b-02f1-26ca500fbafa"
-              } ]
+              "headerButton" : [ ]
             },
             "configMode" : "basic",
             "displayTimewindow" : true,
@@ -387,25 +369,7 @@
             "showLegend" : false,
             "widgetStyle" : { },
             "actions" : {
-              "headerButton" : [ {
-                "name" : "History",
-                "buttonType" : "raised",
-                "showIcon" : true,
-                "icon" : "open_in_new",
-                "buttonColor" : "#ffffff",
-                "buttonFillColor" : "#F44336",
-                "useShowWidgetActionFunction" : null,
-                "showWidgetActionFunction" : "return true;",
-                "type" : "openDashboard",
-                "targetDashboardStateId" : "default",
-                "setEntityId" : true,
-                "stateEntityParamName" : null,
-                "openNewBrowserTab" : false,
-                "targetDashboardId" : "8b926cf0-4df9-11f0-9e49-05adc209a747",
-                "openInSeparateDialog" : false,
-                "openInPopover" : false,
-                "id" : "bac8d90a-e3f3-ba0b-02f1-26ca500fbafa"
-              } ]
+              "headerButton" : [ ]
             },
             "configMode" : "basic",
             "displayTimewindow" : true,
@@ -1208,6 +1172,158 @@
           "row" : 0,
           "col" : 0,
           "id" : "c056dd44-bf07-3e74-34ae-ea0c9848cdcb"
+        },
+        "ecfada07-539b-c43f-2c48-37d65f91b094" : {
+          "typeFullFqn" : "system.action_button",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 1,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "33d757d7-114d-d6d7-6683-ce1c18476516",
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1750354128239,
+                  "endTimeMs" : 1750440528239
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF01",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "activatedState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "disabledState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "appearance" : {
+                "type" : "filled",
+                "showLabel" : true,
+                "label" : "History",
+                "showIcon" : true,
+                "icon" : "open_in_new",
+                "iconSize" : 24,
+                "iconSizeUnit" : "px",
+                "mainColor" : "#F44336",
+                "backgroundColor" : "#FFFFFF",
+                "autoScale" : true,
+                "customStyle" : {
+                  "enabled" : null,
+                  "hovered" : null,
+                  "pressed" : null,
+                  "activated" : null,
+                  "disabled" : null
+                }
+              }
+            },
+            "title" : "Action button",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "borderRadius" : "4px",
+            "configMode" : "advanced",
+            "actions" : {
+              "click" : [ {
+                "id" : "3358ea19-ac3c-2e98-c19a-079fde270c0e",
+                "name" : "onClick",
+                "icon" : "more_horiz",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "openRightLayout" : false,
+                "setEntityId" : true,
+                "stateEntityParamName" : "entityId",
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "8b926cf0-4df9-11f0-9e49-05adc209a747",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ecfada07-539b-c43f-2c48-37d65f91b094"
         }
       },
       "states" : {
@@ -1257,6 +1373,14 @@
                   "sizeX" : 8,
                   "sizeY" : 4,
                   "row" : 4,
+                  "col" : 16
+                },
+                "ecfada07-539b-c43f-2c48-37d65f91b094" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "preserveAspectRatio" : false,
+                  "resizable" : true,
+                  "row" : 0,
                   "col" : 16
                 }
               },
