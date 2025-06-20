@@ -170,7 +170,7 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "Hisotry",
-                "buttonType" : "flat",
+                "buttonType" : "raised",
                 "showIcon" : true,
                 "icon" : "open_in_new",
                 "buttonColor" : "#ffffff",
