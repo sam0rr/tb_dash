@@ -64,17 +64,18 @@
             "showTitle" : false,
             "backgroundColor" : "rgba(0, 0, 0, 0)",
             "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "100px",
+            "padding" : "20px",
             "settings" : {
-              "labelPosition" : "top",
               "layout" : "horizontal",
+              "autoScale" : true,
               "showLabel" : true,
               "labelFont" : {
                 "family" : "Roboto",
                 "size" : 16,
                 "sizeUnit" : "px",
                 "style" : "normal",
-                "weight" : "500"
+                "weight" : "500",
+                "lineHeight" : "1.5"
               },
               "labelColor" : {
                 "type" : "constant",
@@ -88,6 +89,7 @@
               "iconColor" : {
                 "type" : "constant",
                 "color" : "#FF0000",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';",
                 "gradient" : {
                   "advancedMode" : false,
                   "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
@@ -109,15 +111,15 @@
                   "advancedMode" : false,
                   "range" : [ ],
                   "rangeAdvanced" : [ ]
-                },
-                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+                }
               },
               "valueFont" : {
+                "family" : "Roboto",
                 "size" : 36,
                 "sizeUnit" : "px",
-                "family" : "Roboto",
+                "style" : "normal",
                 "weight" : "500",
-                "style" : "normal"
+                "lineHeight" : "100%"
               },
               "valueColor" : {
                 "type" : "constant",
@@ -128,14 +130,16 @@
               "dateFormat" : {
                 "format" : null,
                 "lastUpdateAgo" : true,
-                "custom" : false
+                "custom" : false,
+                "auto" : false
               },
               "dateFont" : {
                 "family" : "Roboto",
                 "size" : 12,
                 "sizeUnit" : "px",
                 "style" : "normal",
-                "weight" : "500"
+                "weight" : "500",
+                "lineHeight" : "1.33"
               },
               "dateColor" : {
                 "type" : "constant",
@@ -144,15 +148,14 @@
               },
               "background" : {
                 "type" : "color",
-                "imageUrl" : "tb-image;/api/images/tenant/background.png",
                 "color" : "#fff",
                 "overlay" : {
                   "enabled" : false,
                   "color" : "rgba(255,255,255,0.72)",
                   "blur" : 3
-                }
+                },
+                "imageUrl" : "tb-image;/api/images/tenant/background.png"
               },
-              "autoScale" : true,
               "padding" : ""
             },
             "title" : "Horizontal value card",
