@@ -1,0 +1,27 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Telemetry Detail View",
+    "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
+    "mobileHide" : true,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Telemetry Detail View"
+    },
+    "name" : "Telemetry Detail View",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "8b926cf0-4df9-11f0-9e49-05adc209a747"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
