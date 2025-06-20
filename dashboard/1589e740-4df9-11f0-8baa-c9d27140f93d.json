@@ -1218,46 +1218,46 @@
             "main" : {
               "widgets" : {
                 "26748a15-fc5a-0ee7-d33f-bff3022d3c8b" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
+                  "sizeX" : 4,
+                  "sizeY" : 4,
                   "row" : 0,
                   "col" : 0
                 },
                 "ddea7575-91ee-d424-d45f-60344be6299e" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
+                  "sizeX" : 4,
+                  "sizeY" : 4,
                   "row" : 0,
-                  "col" : 6
+                  "col" : 4
                 },
                 "045ee01a-2bb5-5d59-c4ea-52b25677bf08" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
-                  "row" : 6,
+                  "sizeX" : 4,
+                  "sizeY" : 4,
+                  "row" : 4,
                   "col" : 0
                 },
                 "394a1d5e-6aed-4a9b-2bad-0cb2fa596795" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
-                  "row" : 6,
-                  "col" : 6
+                  "sizeX" : 4,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 4
                 },
                 "1a79f099-3c85-f103-877d-82621b89f2c1" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
-                  "row" : 12,
+                  "sizeX" : 4,
+                  "sizeY" : 4,
+                  "row" : 8,
                   "col" : 0
                 },
                 "6c98e395-b39f-34d4-bb3c-2021c2eee31d" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
-                  "row" : 12,
-                  "col" : 6
+                  "sizeX" : 4,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 4
                 },
                 "c056dd44-bf07-3e74-34ae-ea0c9848cdcb" : {
-                  "sizeX" : 6,
-                  "sizeY" : 6,
-                  "row" : 6,
-                  "col" : 12
+                  "sizeX" : 4,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 8
                 }
               },
               "gridSettings" : {
