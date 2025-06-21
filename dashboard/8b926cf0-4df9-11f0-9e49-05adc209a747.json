@@ -475,7 +475,7 @@
             "enableFullscreen" : true,
             "titleStyle" : null,
             "mobileHeight" : null,
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "actions" : { },
             "showTitleIcon" : false,
             "titleIcon" : "thermostat",
@@ -602,9 +602,7 @@
                     }
                   },
                   "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
+                    "showValuesForComparison" : false
                   }
                 },
                 "_hash" : 0.3104281305037878,
@@ -679,9 +677,7 @@
                     }
                   },
                   "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
+                    "showValuesForComparison" : false
                   }
                 },
                 "_hash" : 0.9991472243269673,
@@ -755,9 +751,7 @@
                     }
                   },
                   "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
+                    "showValuesForComparison" : false
                   }
                 },
                 "_hash" : 0.7306156613469098,
@@ -831,9 +825,7 @@
                     }
                   },
                   "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
+                    "showValuesForComparison" : false
                   }
                 },
                 "_hash" : 0.14842624577701946,
@@ -907,9 +899,7 @@
                     }
                   },
                   "comparisonSettings" : {
-                    "showValuesForComparison" : false,
-                    "comparisonValuesLabel" : "",
-                    "color" : ""
+                    "showValuesForComparison" : false
                   }
                 },
                 "_hash" : 0.44433122641801504,
@@ -959,7 +949,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
-              "comparisonEnabled" : true,
+              "comparisonEnabled" : false,
               "timeForComparison" : "previousInterval",
               "comparisonCustomIntervalValue" : 7200000,
               "comparisonXAxis" : {
@@ -1206,7 +1196,7 @@
             "enableFullscreen" : true,
             "titleStyle" : null,
             "mobileHeight" : null,
-            "configMode" : "basic",
+            "configMode" : "advanced",
             "actions" : { },
             "showTitleIcon" : false,
             "titleIcon" : "thermostat",
@@ -1263,20 +1253,22 @@
             "main" : {
               "widgets" : {
                 "74e3dba2-f13e-60ca-46af-ed8f279157c9" : {
-                  "sizeX" : 19,
-                  "sizeY" : 10,
+                  "sizeX" : 14,
+                  "sizeY" : 9,
                   "mobileHeight" : null,
                   "row" : 0,
-                  "col" : 0
-                },
-                "97d4922a-ef7a-4e71-07a5-cc0f4739240c" : {
-                  "sizeX" : 19,
-                  "sizeY" : 4,
-                  "mobileHeight" : null,
-                  "row" : 10,
                   "col" : 0,
                   "resizable" : true,
-                  "preserveAspectRatio" : false
+                  "preserveAspectRatio" : true
+                },
+                "97d4922a-ef7a-4e71-07a5-cc0f4739240c" : {
+                  "sizeX" : 14,
+                  "sizeY" : 9,
+                  "mobileHeight" : null,
+                  "row" : 0,
+                  "col" : 14,
+                  "resizable" : true,
+                  "preserveAspectRatio" : true
                 }
               },
               "gridSettings" : {
