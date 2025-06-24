@@ -621,8 +621,8 @@
                 "hideQuickInterval" : false
               },
               "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
+                "type" : "NONE",
+                "limit" : 50000
               },
               "timezone" : null
             },
