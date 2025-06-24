@@ -607,7 +607,7 @@
                 "hideQuickInterval" : false
               },
               "history" : {
-                "historyType" : 0,
+                "historyType" : 2,
                 "interval" : 3600000,
                 "timewindowMs" : 86400000,
                 "fixedTimewindow" : {
