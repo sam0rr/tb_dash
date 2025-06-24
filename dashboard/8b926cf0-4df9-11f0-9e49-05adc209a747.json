@@ -265,7 +265,7 @@
               }, {
                 "name" : "refr",
                 "type" : "timeseries",
-                "label" : "refr",
+                "label" : "Compressor",
                 "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
@@ -346,7 +346,7 @@
               }, {
                 "name" : "defr",
                 "type" : "timeseries",
-                "label" : "defr",
+                "label" : "Defrost",
                 "color" : "#FFFFFF01",
                 "settings" : {
                   "yAxisId" : "default",
@@ -508,7 +508,7 @@
               }, {
                 "name" : "dig2",
                 "type" : "timeseries",
-                "label" : "dig2",
+                "label" : "Digital Input 2",
                 "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
