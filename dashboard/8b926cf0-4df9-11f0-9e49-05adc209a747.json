@@ -1265,8 +1265,8 @@
                   "sizeX" : 14,
                   "sizeY" : 9,
                   "mobileHeight" : null,
-                  "row" : 9,
-                  "col" : 0,
+                  "row" : 0,
+                  "col" : 14,
                   "resizable" : true,
                   "preserveAspectRatio" : true
                 }
