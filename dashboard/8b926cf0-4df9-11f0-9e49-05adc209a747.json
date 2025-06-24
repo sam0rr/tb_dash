@@ -184,7 +184,7 @@
               "dataKeys" : [ {
                 "name" : "fans",
                 "type" : "timeseries",
-                "label" : "fans",
+                "label" : "Fans",
                 "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
@@ -255,7 +255,13 @@
                     "color" : ""
                   }
                 },
-                "_hash" : 0.7435128300300023
+                "_hash" : 0.7435128300300023,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "refr",
                 "type" : "timeseries",
@@ -330,7 +336,13 @@
                     "color" : ""
                   }
                 },
-                "_hash" : 0.5775562320686451
+                "_hash" : 0.5775562320686451,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "defr",
                 "type" : "timeseries",
@@ -405,11 +417,17 @@
                     "color" : ""
                   }
                 },
-                "_hash" : 0.195080400199247
+                "_hash" : 0.195080400199247,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "dig1",
                 "type" : "timeseries",
-                "label" : "dig1",
+                "label" : "Digital Input 1",
                 "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
@@ -480,7 +498,13 @@
                     "color" : ""
                   }
                 },
-                "_hash" : 0.9527091999186283
+                "_hash" : 0.9527091999186283,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               }, {
                 "name" : "dig2",
                 "type" : "timeseries",
@@ -555,7 +579,13 @@
                     "color" : ""
                   }
                 },
-                "_hash" : 0.7643636326412071
+                "_hash" : 0.7643636326412071,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : 0,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -725,7 +755,7 @@
                   "absoluteWidth" : 1000
                 }
               },
-              "showLegend" : false,
+              "showLegend" : true,
               "legendColumnTitleFont" : {
                 "family" : "Roboto",
                 "size" : 12,
