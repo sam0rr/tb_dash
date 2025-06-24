@@ -596,7 +596,7 @@
               "hideAggregation" : false,
               "hideAggInterval" : false,
               "hideTimezone" : false,
-              "selectedTab" : 0,
+              "selectedTab" : 1,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 3600000,
@@ -607,9 +607,9 @@
                 "hideQuickInterval" : false
               },
               "history" : {
-                "historyType" : 2,
+                "historyType" : 0,
                 "interval" : 3600000,
-                "timewindowMs" : 86400000,
+                "timewindowMs" : 1209600000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750353071628,
                   "endTimeMs" : 1750439471628
@@ -1324,7 +1324,7 @@
                 "hideQuickInterval" : false
               },
               "aggregation" : {
-                "type" : "MAX",
+                "type" : "NONE",
                 "limit" : 50000
               },
               "timezone" : null
