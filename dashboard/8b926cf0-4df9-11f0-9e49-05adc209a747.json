@@ -185,7 +185,7 @@
                 "name" : "fans",
                 "type" : "timeseries",
                 "label" : "fans",
-                "color" : "#f44336",
+                "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
                   "showInLegend" : true,
@@ -260,7 +260,7 @@
                 "name" : "refr",
                 "type" : "timeseries",
                 "label" : "refr",
-                "color" : "#ffc107",
+                "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
                   "showInLegend" : true,
@@ -335,7 +335,7 @@
                 "name" : "defr",
                 "type" : "timeseries",
                 "label" : "defr",
-                "color" : "#607d8b",
+                "color" : "#FFFFFF01",
                 "settings" : {
                   "yAxisId" : "default",
                   "showInLegend" : true,
@@ -410,7 +410,7 @@
                 "name" : "dig1",
                 "type" : "timeseries",
                 "label" : "dig1",
-                "color" : "#9c27b0",
+                "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
                   "showInLegend" : true,
@@ -485,7 +485,7 @@
                 "name" : "dig2",
                 "type" : "timeseries",
                 "label" : "dig2",
-                "color" : "#8bc34a",
+                "color" : "#FFFFFF00",
                 "settings" : {
                   "yAxisId" : "default",
                   "showInLegend" : true,
