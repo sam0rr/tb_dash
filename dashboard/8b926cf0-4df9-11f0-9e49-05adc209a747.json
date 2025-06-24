@@ -609,7 +609,7 @@
               "history" : {
                 "historyType" : 0,
                 "interval" : 3600000,
-                "timewindowMs" : 7200000,
+                "timewindowMs" : 86400000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750353071628,
                   "endTimeMs" : 1750439471628
@@ -865,7 +865,7 @@
             "showTitleIcon" : false,
             "titleIcon" : "thermostat",
             "iconColor" : "#1F6BDD",
-            "useDashboardTimewindow" : true,
+            "useDashboardTimewindow" : false,
             "displayTimewindow" : true,
             "titleFont" : {
               "size" : 16,
@@ -915,9 +915,10 @@
           "sizeY" : 5,
           "config" : {
             "datasources" : [ {
-              "type" : "device",
+              "type" : "entity",
               "name" : "",
-              "deviceId" : "49d86ed0-4152-11f0-9143-ed31251bb06c",
+              "deviceId" : null,
+              "entityAliasId" : "0d84ec91-c05c-7639-43de-aa9c062e3e34",
               "dataKeys" : [ {
                 "name" : "fans",
                 "type" : "timeseries",
@@ -1312,7 +1313,7 @@
               "history" : {
                 "historyType" : 0,
                 "interval" : 3600000,
-                "timewindowMs" : 1209600000,
+                "timewindowMs" : 86400000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750354639774,
                   "endTimeMs" : 1750441039774
@@ -1685,14 +1686,13 @@
       },
       "filters" : { },
       "timewindow" : {
-        "displayValue" : "",
         "hideAggregation" : false,
         "hideAggInterval" : false,
         "hideTimezone" : false,
         "selectedTab" : 0,
         "realtime" : {
-          "realtimeType" : 0,
-          "interval" : 1000,
+          "realtimeType" : 1,
+          "interval" : 300000,
           "timewindowMs" : 60000,
           "quickInterval" : "CURRENT_DAY",
           "hideInterval" : false,
@@ -1714,9 +1714,10 @@
           "hideQuickInterval" : false
         },
         "aggregation" : {
-          "type" : "AVG",
-          "limit" : 25000
-        }
+          "type" : "NONE",
+          "limit" : 50000
+        },
+        "timezone" : null
       },
       "settings" : {
         "stateControllerId" : "entity",
