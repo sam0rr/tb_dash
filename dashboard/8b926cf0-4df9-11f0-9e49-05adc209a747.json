@@ -600,7 +600,7 @@
               "realtime" : {
                 "realtimeType" : 0,
                 "interval" : 3600000,
-                "timewindowMs" : 86400000,
+                "timewindowMs" : 518400000,
                 "quickInterval" : "CURRENT_DAY",
                 "hideInterval" : false,
                 "hideLastInterval" : false,
@@ -1313,7 +1313,7 @@
               "history" : {
                 "historyType" : 0,
                 "interval" : 3600000,
-                "timewindowMs" : 43200000,
+                "timewindowMs" : 518400000,
                 "fixedTimewindow" : {
                   "startTimeMs" : 1750354639774,
                   "endTimeMs" : 1750441039774
