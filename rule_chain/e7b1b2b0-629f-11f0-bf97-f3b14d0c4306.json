@@ -45,8 +45,8 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "Save Telemetry With Expiration",
-        "layoutX" : 681,
-        "layoutY" : 265
+        "layoutX" : 689,
+        "layoutY" : 166
       },
       "configuration" : {
         "processingSettings" : {
@@ -75,8 +75,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Filter POST_TELEMETRY",
-        "layoutX" : 320,
-        "layoutY" : 265
+        "layoutX" : 333,
+        "layoutY" : 595
       },
       "configuration" : {
         "version" : 0
@@ -101,8 +101,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Log matched message type",
-        "layoutX" : 524,
-        "layoutY" : 119
+        "layoutX" : 332,
+        "layoutY" : 470
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -125,8 +125,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Confirms the telemetry was saved with TTL",
-        "layoutX" : 896,
-        "layoutY" : 119
+        "layoutX" : 904,
+        "layoutY" : 20
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -153,8 +153,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Catches all non-POST_TELEMETRY_REQUEST messages",
-        "layoutX" : 525,
-        "layoutY" : 430
+        "layoutX" : 336,
+        "layoutY" : 709
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -181,8 +181,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Logs if saving telemetry fails due to TTL error, system issue, etc.",
-        "layoutX" : 895,
-        "layoutY" : 424
+        "layoutX" : 903,
+        "layoutY" : 325
       },
       "configuration" : {
         "scriptLang" : "JS",
