@@ -890,7 +890,7 @@
                 },
                 "1448aa61-6ec9-3ea8-fd74-ae5900bcede2" : {
                   "sizeX" : 8,
-                  "sizeY" : 1,
+                  "sizeY" : 2,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
                   "row" : 0,
@@ -901,7 +901,7 @@
                   "sizeY" : 7,
                   "preserveAspectRatio" : true,
                   "resizable" : true,
-                  "row" : 1,
+                  "row" : 2,
                   "col" : 16
                 },
                 "6c229744-f981-f7dc-ec5d-dbf25ae3fd2b" : {
