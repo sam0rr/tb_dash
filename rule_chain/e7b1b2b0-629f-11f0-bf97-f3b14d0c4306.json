@@ -342,7 +342,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var state    = Number(msg.refr);\nvar prevState= Number(metadata.last_refr_state) || 0;\nvar prevTs   = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum    = Number(metadata.accumulated_compressor_time) || 0;\nvar now      = Number(metadata.ts);\n\nif (state !== prevState) {\n    if (prevState === 1) {\n        accum += (now - prevTs);\n        prevTs = 0;\n    }\n\n    if (state === 1) {\n        prevTs = now;\n    }\n\n    prevState = state;\n}\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts       = prevTs.toString();\nmsg.last_refr_state             = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "jsScript" : "var state    = Number(msg.refr);\nvar prevState= Number(metadata.last_refr_state) || 0;\nvar prevTs   = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum    = Number(metadata.accumulated_compressor_time) || 0;\nvar now      = Number(metadata.ts);\n\nif (state !== prevState) {\n    if (prevState === 1) {\n        accum += (now - prevTs);\n        prevTs = 0;\n    }\n\n    if (state === 1) {\n        prevTs = now;\n    }\n\n    prevState = state;\n}\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts       = prevTs.toString();\nmsg.last_refr_state             = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST' };\n",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
