@@ -901,16 +901,16 @@
                   "sizeY" : 5,
                   "preserveAspectRatio" : false,
                   "resizable" : true,
-                  "row" : 2,
-                  "col" : 16
+                  "row" : 4,
+                  "col" : 0
                 },
                 "71b156c3-efac-97fa-7de2-9ee7a79bfc43" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
                   "preserveAspectRatio" : true,
                   "resizable" : true,
-                  "row" : 4,
-                  "col" : 0
+                  "row" : 2,
+                  "col" : 16
                 },
                 "3866c33c-3096-486d-41b7-331cbcc59cc2" : {
                   "sizeX" : 8,
