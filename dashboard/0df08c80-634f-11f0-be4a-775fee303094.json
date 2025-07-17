@@ -656,7 +656,8 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "borderRadius" : ""
           },
           "row" : 0,
           "col" : 0,
