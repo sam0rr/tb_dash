@@ -228,7 +228,7 @@
         "tellFailureIfAbsent" : false,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ "accumulated_compressor_time", "last_refr_state", "last_refr_on_start_ts" ],
+        "sharedAttributeNames" : [ "total_accumulated_time", "session_start_time", "previous_state", "last_update_time" ],
         "serverAttributeNames" : [ ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
