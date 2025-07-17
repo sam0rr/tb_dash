@@ -1498,7 +1498,7 @@
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "custom",
-                "customFunction" : "widgetContext.attributeService.saveEntityAttributes(\n    entityId, \n    'SHARED_SCOPE',\n    {\n        \"total_accumulated_time\": \"0\",\n        \"session_start_time\": \"0\", \n        \"previous_state\": \"0\",\n        \"last_update_time\": \"0\"\n    }\n).subscribe();",
+                "customFunction" : "console.log('Reset button clicked');\nconsole.log('EntityId:', entityId);\n\nwidgetContext.attributeService.saveEntityAttributes(\n    entityId, \n    'SHARED_SCOPE',\n    {\n        \"total_accumulated_time\": \"0\",\n        \"session_start_time\": \"0\", \n        \"previous_state\": \"0\",\n        \"last_update_time\": \"0\"\n    }\n).subscribe(\n    function(result) {\n        console.log('Reset successful:', result);\n        widgetContext.showSuccessToast('Reset OK!');\n    },\n    function(error) {\n        console.log('Reset failed:', error);\n        widgetContext.showErrorToast('Reset failed!');\n    }\n);",
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "8b507a89-554c-a613-b1aa-09035db92b6b"
