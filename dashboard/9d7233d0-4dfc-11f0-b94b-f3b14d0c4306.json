@@ -1549,6 +1549,91 @@
           "row" : 0,
           "col" : 0,
           "id" : "c318c79a-423c-d6d8-9e90-3f18bfd9f5f7"
+        },
+        "465d2676-e003-fa3c-b4aa-760de4c86497" : {
+          "typeFullFqn" : "system.cards.html_value_card",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "total_uptime_start",
+                "type" : "attribute",
+                "label" : "total_uptime_start",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.14312571324279377
+              }, {
+                "name" : "total_compressor_time",
+                "type" : "attribute",
+                "label" : "total_compressor_time",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.7501168263659904
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1752675495335,
+                  "endTimeMs" : 1752761895335
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n   <div class='content' style='text-align: center;'>\n       <h2 style='color: #305680; margin-bottom: 20px;'>Compressor Statistics</h2>\n       \n       <div style='display: flex; justify-content: space-around; flex-wrap: wrap;'>\n           \n           <div style='margin: 10px; padding: 15px; border: 2px solid #305680; border-radius: 8px; min-width: 150px;'>\n               <h3 style='color: #305680; margin: 0;'>Total Uptime</h3>\n               <div style='font-size: 24px; font-weight: bold;' id='uptime'></div>\n           </div>\n           \n           <div style='margin: 10px; padding: 15px; border: 2px solid #28a745; border-radius: 8px; min-width: 150px;'>\n               <h3 style='color: #28a745; margin: 0;'>Compressor Time</h3>\n               <div style='font-size: 24px; font-weight: bold;' id='compressor'></div>\n           </div>\n           \n           <div style='margin: 10px; padding: 15px; border: 2px solid #dc3545; border-radius: 8px; min-width: 150px;'>\n               <h3 style='color: #dc3545; margin: 0;'>Usage</h3>\n               <div style='font-size: 24px; font-weight: bold;' id='usage'></div>\n           </div>\n           \n       </div>\n   </div>\n</div>\n\n<script>\nfunction formatTime(totalMs) {\n   var hours = Math.floor(totalMs / 3600000);\n   var minutes = Math.floor((totalMs % 3600000) / 60000);\n   var seconds = Math.floor((totalMs % 60000) / 1000);\n   \n   if (hours > 0) {\n       return hours + \"h \" + minutes + \"m \" + seconds + \"s\";\n   } else if (minutes > 0) {\n       return minutes + \"m \" + seconds + \"s\";\n   } else {\n       return seconds + \"s\";\n   }\n}\n\nvar now = Date.now();\nvar uptimeStart = parseInt('${total_uptime_start}') || 0;\nvar compressorTime = parseInt('${total_compressor_time}') || 0;\n\nvar totalUptime = now - uptimeStart;\nvar uptimeFormatted = formatTime(totalUptime);\nvar compressorFormatted = formatTime(compressorTime);\nvar usagePercent = totalUptime > 0 ? (compressorTime / totalUptime * 100).toFixed(1) : \"0.0\";\n\ndocument.getElementById('uptime').innerHTML = uptimeFormatted;\ndocument.getElementById('compressor').innerHTML = compressorFormatted;\ndocument.getElementById('usage').innerHTML = usagePercent + '%';\n</script>",
+              "cardCss" : ".card {\n   width: 100%;\n   height: 100%;\n   border: 2px solid #ccc;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 20px;\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-content: space-around;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-around;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: uppercase;\n    color: #999;\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding-bottom: 10px;\n    line-height: 32px;\n}\n\n.card .value {\n    font-size: 38px;\n    font-weight: 200;\n}\n\n.card .description {\n    font-size: 20px;\n    color: #999;\n}\n"
+            },
+            "title" : "HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "465d2676-e003-fa3c-b4aa-760de4c86497"
         }
       },
       "states" : {
@@ -1613,6 +1698,12 @@
                   "sizeY" : 4,
                   "row" : 8,
                   "col" : 16
+                },
+                "465d2676-e003-fa3c-b4aa-760de4c86497" : {
+                  "sizeX" : 23,
+                  "sizeY" : 3,
+                  "row" : 12,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
