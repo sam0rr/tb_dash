@@ -899,7 +899,7 @@
                 "e87f037f-1607-b05b-4f75-aa8b63e8d00a" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "preserveAspectRatio" : false,
+                  "preserveAspectRatio" : true,
                   "resizable" : true,
                   "row" : 4,
                   "col" : 0
