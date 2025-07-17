@@ -228,7 +228,7 @@
         "tellFailureIfAbsent" : false,
         "fetchTo" : "METADATA",
         "clientAttributeNames" : [ ],
-        "sharedAttributeNames" : [ "total_accumulated_time", "session_start_time", "previous_state", "last_update_time" ],
+        "sharedAttributeNames" : [ "total_uptime_start", "total_compressor_time", "session_start_time", "previous_state", "last_update_time" ],
         "serverAttributeNames" : [ ],
         "latestTsKeyNames" : [ ],
         "getLatestValueWithTs" : false
@@ -342,7 +342,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var currentState = Number(msg.refr);\nvar previousState = Number(metadata.shared_previous_state) || 0;\nvar sessionStartTime = Number(metadata.shared_session_start_time) || 0;\nvar lastUpdateTime = Number(metadata.shared_last_update_time) || 0;\nvar totalAccumulatedTime = Number(metadata.shared_total_accumulated_time) || 0;\nvar currentTime = Number(metadata.ts);\n\nif (previousState === 1 && lastUpdateTime > 0) {\n  totalAccumulatedTime += (currentTime - lastUpdateTime);\n}\n\nvar newSessionStartTime = (previousState === 0 && currentState === 1)\n  ? currentTime\n  : (currentState === 1 ? sessionStartTime : 0);\n\nfor (var key in msg) {\n  delete msg[key];\n}\n\nmsg.total_accumulated_time = totalAccumulatedTime.toString();\nmsg.session_start_time = newSessionStartTime.toString();\nmsg.previous_state = currentState.toString();\nmsg.last_update_time = currentTime.toString();\n\nreturn {\n  msg: msg,\n  metadata: metadata,\n  msgType: 'POST_ATTRIBUTES_REQUEST'\n};\n",
+        "jsScript" : "var totalUptimeStart = Number(metadata.shared_total_uptime_start) || 0;\nvar totalCompressorTime = Number(metadata.shared_total_compressor_time) || 0;\nvar sessionStartTime = Number(metadata.shared_session_start_time) || 0;\nvar previousState = Number(metadata.shared_previous_state) || 0;\nvar lastUpdateTime = Number(metadata.shared_last_update_time) || 0;\nvar currentState = Number(msg.refr);\nvar currentTime = Number(metadata.ts);\n\nif (totalUptimeStart === 0) {\n    totalUptimeStart = currentTime;\n}\n\nif (previousState === 1 && lastUpdateTime > 0) {\n  totalCompressorTime += (currentTime - lastUpdateTime);\n}\n\nvar newSessionStartTime = (previousState === 0 && currentState === 1)\n  ? currentTime\n  : (currentState === 1 ? sessionStartTime : 0);\n\nfor (var key in msg) {\n  delete msg[key];\n}\n\nmsg.total_uptime_start = totalUptimeStart.toString();\nmsg.total_compressor_time = totalCompressorTime.toString();\nmsg.session_start_time = newSessionStartTime.toString();\nmsg.previous_state = currentState.toString();\nmsg.last_update_time = currentTime.toString();\n\nreturn {\n  msg: msg,\n  metadata: metadata,\n  msgType: 'POST_ATTRIBUTES_REQUEST'\n};\n",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
@@ -403,7 +403,7 @@
         "scope" : "SHARED_SCOPE",
         "notifyDevice" : false,
         "sendAttributesUpdatedNotification" : false,
-        "updateAttributesOnlyOnValueChange" : false
+        "updateAttributesOnlyOnValueChange" : true
       },
       "configurationVersion" : 3,
       "createdTime" : 0,
