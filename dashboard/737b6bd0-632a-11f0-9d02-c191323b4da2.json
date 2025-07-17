@@ -1605,8 +1605,8 @@
                   "col" : 16
                 },
                 "6c229744-f981-f7dc-ec5d-dbf25ae3fd2b" : {
-                  "sizeX" : 8,
-                  "sizeY" : 7,
+                  "sizeX" : 14.857142857142856,
+                  "sizeY" : 13,
                   "preserveAspectRatio" : true,
                   "resizable" : true,
                   "row" : 12,
