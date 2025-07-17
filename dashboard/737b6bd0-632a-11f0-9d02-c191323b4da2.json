@@ -1439,6 +1439,104 @@
           "row" : 0,
           "col" : 0,
           "id" : "668dc47b-81a7-b3d7-9334-5eb5ad5046bb"
+        },
+        "6c229744-f981-f7dc-ec5d-dbf25ae3fd2b" : {
+          "typeFullFqn" : "system.cards.html_value_card",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "fans",
+                "type" : "timeseries",
+                "label" : "fans",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9687257463480133
+              }, {
+                "name" : "refr",
+                "type" : "timeseries",
+                "label" : "refr",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.47812860714942707
+              }, {
+                "name" : "defr",
+                "type" : "timeseries",
+                "label" : "defr",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.9764640873199949
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1752675495335,
+                  "endTimeMs" : 1752761895335
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <h1 class='main-title'>Refrigerator Status</h1>\n        \n        <div class='stats-container'>\n            \n            <div class='stat-box fans-box'>\n                <div class='status-icon'>🌀</div>\n                <h3 class='stat-title fans-title'>Fans</h3>\n                <div class='stat-value' id='fans-status'></div>\n            </div>\n            \n            <div class='stat-box refr-box'>\n                <div class='status-icon'>⚙️</div>\n                <h3 class='stat-title refr-title'>Compressor</h3>\n                <div class='stat-value' id='refr-status'></div>\n            </div>\n\n            <div class='stat-box defr-box'>\n                <div class='status-icon'>❄️</div>\n                <h3 class='stat-title defr-title'>Defrost</h3>\n                <div class='stat-value' id='defr-status'></div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n<script>\nfunction updateStatus(elementId, value, activeText, inactiveText) {\n    var element = document.getElementById(elementId);\n    if (value === '1') {\n        element.innerHTML = activeText;\n        element.className = 'stat-value status-active';\n    } else {\n        element.innerHTML = inactiveText;\n        element.className = 'stat-value status-inactive';\n    }\n}\n\nvar fansValue = '${fans}' || '0';\nvar refrValue = '${refr}' || '0';\nvar defrValue = '${defr}' || '0';\n\nupdateStatus('fans-status', fansValue, 'ON', 'OFF');\nupdateStatus('refr-status', refrValue, 'ON', 'OFF');\nupdateStatus('defr-status', defrValue, 'ON', 'OFF');\n</script>",
+              "cardCss" : ".card {\n    width: 100%;\n    height: 100%;\n    background: white;\n    border-radius: 8px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n    border: 1px solid #d1d5db;\n}\n\n.card .content {\n    padding: 24px;\n    height: 100%;\n    box-sizing: border-box;\n}\n\n.stats-container {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 16px;\n    margin-top: 20px;\n}\n\n.stat-box {\n    background: #ffffff;\n    border-radius: 6px;\n    padding: 20px 16px;\n    border: 1px solid #e5e7eb;\n    text-align: center;\n    position: relative;\n}\n\n.status-icon {\n    font-size: 32px;\n    margin-bottom: 8px;\n}\n\n.stat-title {\n    font-size: 13px;\n    font-weight: 500;\n    text-transform: uppercase;\n    letter-spacing: 0.5px;\n    margin: 0 0 12px 0;\n    color: #6b7280;\n}\n\n.stat-value {\n    font-size: 24px;\n    font-weight: 600;\n    margin: 0;\n    color: #111827;\n}\n\n.status-active {\n    color: #10b981 !important;\n}\n\n.status-inactive {\n    color: #6b7280 !important;\n}\n\n.main-title {\n    color: #111827;\n    font-size: 20px;\n    font-weight: 600;\n    margin: 0;\n    text-align: center;\n}\n\n.fans-box { \n    border-left: 3px solid #3b82f6; \n}\n\n.refr-box { \n    border-left: 3px solid #10b981; \n}\n\n.defr-box { \n    border-left: 3px solid #ef4444; \n}\n\n.fans-title { \n    color: #3b82f6; \n}\n\n.refr-title { \n    color: #10b981; \n}\n\n.defr-title { \n    color: #ef4444; \n}"
+            },
+            "title" : "HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : {
+              "headerButton" : [ ]
+            },
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "6c229744-f981-f7dc-ec5d-dbf25ae3fd2b"
         }
       },
       "states" : {
@@ -1505,6 +1603,14 @@
                   "sizeY" : 4,
                   "row" : 8,
                   "col" : 16
+                },
+                "6c229744-f981-f7dc-ec5d-dbf25ae3fd2b" : {
+                  "sizeX" : 8,
+                  "sizeY" : 7,
+                  "preserveAspectRatio" : true,
+                  "resizable" : true,
+                  "row" : 12,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
