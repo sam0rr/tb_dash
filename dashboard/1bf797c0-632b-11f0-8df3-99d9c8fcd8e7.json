@@ -1,0 +1,1598 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Device Detail View",
+    "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
+    "mobileHide" : true,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Device Detail View",
+      "widgets" : {
+        "df13f681-83af-9bdb-d282-2ae1f18f9b30" : {
+          "typeFullFqn" : "system.cards.value_card",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "Temp1",
+                "type" : "timeseries",
+                "label" : "Temp1",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.08700198230612144
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1750352554095,
+                  "endTimeMs" : 1750438954095
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "labelPosition" : "top",
+              "layout" : "centered",
+              "showLabel" : true,
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "labelColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showIcon" : true,
+              "iconSize" : 40,
+              "iconSizeUnit" : "px",
+              "icon" : "thermostat",
+              "iconColor" : {
+                "type" : "constant",
+                "color" : "#F44336",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 100
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "size" : 52,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showDate" : true,
+              "dateFormat" : {
+                "format" : null,
+                "lastUpdateAgo" : true,
+                "custom" : false
+              },
+              "dateFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "dateColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.38)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "background" : {
+                "type" : "color",
+                "color" : "#fff",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              },
+              "autoScale" : false,
+              "padding" : ""
+            },
+            "title" : "Value card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "units" : "°C",
+            "decimals" : 2,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : {
+              "headerButton" : [ ]
+            },
+            "configMode" : "basic",
+            "displayTimewindow" : true,
+            "margin" : "0px",
+            "borderRadius" : "0px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "enableDataExport" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "titleFont" : {
+              "size" : 12,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : null,
+              "style" : null,
+              "lineHeight" : "1.6"
+            },
+            "titleIcon" : "",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "14px",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "14px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : null,
+                "weight" : null,
+                "style" : null,
+                "lineHeight" : "1"
+              },
+              "color" : null
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "df13f681-83af-9bdb-d282-2ae1f18f9b30"
+        },
+        "5ba834fa-bf73-6a53-e5bf-9e2d807032ee" : {
+          "typeFullFqn" : "system.cards.value_card",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "Temp2",
+                "type" : "timeseries",
+                "label" : "Temp2",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8536546789269027
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1750352554095,
+                  "endTimeMs" : 1750438954095
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "labelPosition" : "top",
+              "layout" : "centered",
+              "showLabel" : true,
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "labelColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showIcon" : true,
+              "iconSize" : 40,
+              "iconSizeUnit" : "px",
+              "icon" : "thermostat",
+              "iconColor" : {
+                "type" : "constant",
+                "color" : "#F44336",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 100
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "size" : 52,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showDate" : true,
+              "dateFormat" : {
+                "format" : null,
+                "lastUpdateAgo" : true,
+                "custom" : false
+              },
+              "dateFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "dateColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.38)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "background" : {
+                "type" : "color",
+                "color" : "#fff",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              },
+              "autoScale" : false,
+              "padding" : ""
+            },
+            "title" : "Value card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "units" : "°C",
+            "decimals" : 2,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : {
+              "headerButton" : [ ]
+            },
+            "configMode" : "basic",
+            "displayTimewindow" : true,
+            "margin" : "0px",
+            "borderRadius" : "0px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "enableDataExport" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "titleFont" : {
+              "size" : 12,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : null,
+              "style" : null,
+              "lineHeight" : "1.6"
+            },
+            "titleIcon" : "",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "14px",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "14px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : null,
+                "weight" : null,
+                "style" : null,
+                "lineHeight" : "1"
+              },
+              "color" : null
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "5ba834fa-bf73-6a53-e5bf-9e2d807032ee"
+        },
+        "1448aa61-6ec9-3ea8-fd74-ae5900bcede2" : {
+          "typeFullFqn" : "system.action_button",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 1,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1750354128239,
+                  "endTimeMs" : 1750440528239
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF01",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "activatedState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "disabledState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "appearance" : {
+                "type" : "filled",
+                "showLabel" : true,
+                "label" : "History",
+                "showIcon" : true,
+                "icon" : "open_in_new",
+                "iconSize" : 24,
+                "iconSizeUnit" : "px",
+                "mainColor" : "#F44336",
+                "backgroundColor" : "#FFFFFF",
+                "autoScale" : true,
+                "customStyle" : {
+                  "enabled" : null,
+                  "hovered" : null,
+                  "pressed" : null,
+                  "activated" : null,
+                  "disabled" : null
+                }
+              }
+            },
+            "title" : "Action button",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "borderRadius" : "4px",
+            "configMode" : "advanced",
+            "actions" : {
+              "click" : [ {
+                "id" : "3358ea19-ac3c-2e98-c19a-079fde270c0e",
+                "name" : "onClick",
+                "icon" : "more_horiz",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : "",
+                "openRightLayout" : false,
+                "setEntityId" : true,
+                "stateEntityParamName" : "entityId",
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "8b926cf0-4df9-11f0-9e49-05adc209a747",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "1448aa61-6ec9-3ea8-fd74-ae5900bcede2"
+        },
+        "de5fc0de-b2ad-932b-efe2-8214b9fd58bf" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "fans",
+                "type" : "timeseries",
+                "label" : "fans",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5982725636156885
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : "Roboto",
+                "weight" : "500",
+                "style" : "normal",
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Fans",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : 0
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "de5fc0de-b2ad-932b-efe2-8214b9fd58bf"
+        },
+        "9ff792cc-7c55-022d-c496-825fedb0ff12" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "refr",
+                "type" : "timeseries",
+                "label" : "refr",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8167417579149736
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Compressor Status",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : null,
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "9ff792cc-7c55-022d-c496-825fedb0ff12"
+        },
+        "da9c1136-2350-9eb5-6ebb-0f9a74f97937" : {
+          "typeFullFqn" : "system.cards.html_value_card",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "total_uptime_start",
+                "type" : "attribute",
+                "label" : "total_uptime_start",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.14312571324279377
+              }, {
+                "name" : "initial_compressor_time",
+                "type" : "attribute",
+                "label" : "initial_compressor_time",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6419808703907445
+              }, {
+                "name" : "total_compressor_time",
+                "type" : "attribute",
+                "label" : "total_compressor_time",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.18489269273447861
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1752675495335,
+                  "endTimeMs" : 1752761895335
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <h1 class='main-title'>Compressor Statistics</h1>\n        \n        <div class='stats-container'>\n            \n            <div class='stat-box compressor-box'>\n                <h3 class='stat-title compressor-title'>Compressor Time</h3>\n                <div class='stat-value' id='compressor'></div>\n            </div>\n            \n            <div class='stat-box usage-box'>\n                <h3 class='stat-title usage-title'>Compressor Usage %</h3>\n                <div class='stat-value' id='usage'></div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n\n<script>\nfunction formatTime(totalMs) {\n    var hours = Math.floor(totalMs / 3600000);\n    var minutes = Math.floor((totalMs % 3600000) / 60000);\n    var seconds = Math.floor((totalMs % 60000) / 1000);\n    \n    var hoursStr = hours.toString().padStart(2, '0');\n    var minutesStr = minutes.toString().padStart(2, '0');\n    var secondsStr = seconds.toString().padStart(2, '0');\n    \n    if (hours > 0) {\n        return hoursStr + \"h \" + minutesStr + \"m \" + secondsStr + \"s\";\n    } else if (minutes > 0) {\n        return minutesStr + \"m \" + secondsStr + \"s\";\n    } else {\n        return secondsStr + \"s\";\n    }\n}\n\nvar now = Date.now();\nvar uptimeStart = parseInt('${total_uptime_start}') || 0;\nvar compressorTime = parseInt('${total_compressor_time}') || 0;\nvar initialCompressorTime = parseInt('${initial_compressor_time}') || 0;\n\nvar totalUptime = now - uptimeStart;\nvar displayCompressorTime = compressorTime + initialCompressorTime;\nvar compressorFormatted = formatTime(displayCompressorTime);\nvar usagePercent = totalUptime > 0 ? (compressorTime / totalUptime * 100).toFixed(1) : \"0.0\";\n\ndocument.getElementById('compressor').innerHTML = compressorFormatted;\ndocument.getElementById('usage').innerHTML = usagePercent + '%';\n</script>",
+              "cardCss" : ".card {\n    width: 100%;\n    height: 100%;\n    background: white;\n    border-radius: 8px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n    border: 1px solid #d1d5db;\n}\n\n.card .content {\n    padding: 24px;\n    height: 100%;\n    box-sizing: border-box;\n}\n\n.stats-container {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 16px;\n    margin-top: 20px;\n}\n\n.stat-box {\n    background: #ffffff;\n    border-radius: 6px;\n    padding: 20px 16px;\n    border: 1px solid #e5e7eb;\n    text-align: center;\n}\n\n.stat-title {\n    font-size: 13px;\n    font-weight: 500;\n    text-transform: uppercase;\n    letter-spacing: 0.5px;\n    margin: 0 0 12px 0;\n    color: #6b7280;\n}\n\n.stat-value {\n    font-size: 24px;\n    font-weight: 600;\n    margin: 0;\n    color: #111827;\n}\n\n.main-title {\n    color: #111827;\n    font-size: 20px;\n    font-weight: 600;\n    margin: 0;\n    text-align: center;\n}\n\n.compressor-box { \n    border-left: 3px solid #27ae60; \n}\n\n.usage-box { \n    border-left: 3px solid #dc2626; \n}\n\n.compressor-title { \n    color: #27ae60; \n}\n\n.usage-title { \n    color: #dc2626; \n}"
+            },
+            "title" : "HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "EDIT",
+                "buttonType" : "raised",
+                "showIcon" : true,
+                "icon" : "more_horiz",
+                "buttonColor" : "#ffffff",
+                "buttonFillColor" : "#FF0000",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form #compressorForm=\"ngForm\" [formGroup]=\"compressorFormGroup\" (ngSubmit)=\"save()\" class=\"compressor-form\">\n    <mat-toolbar color=\"primary\">\n        <h2>Compressor Time Management</h2>\n        <span class=\"flex-1\"></span>\n        <button mat-icon-button (click)=\"cancel()\" type=\"button\">\n            <mat-icon>close</mat-icon>\n        </button>\n    </mat-toolbar>\n    \n    <div mat-dialog-content>\n        <mat-form-field class=\"mat-block\">\n            <mat-label>Action</mat-label>\n            <mat-select formControlName=\"action\">\n                <mat-option *ngFor=\"let option of actionOptions\" [value]=\"option.value\">\n                    {{ option.label }}\n                </mat-option>\n            </mat-select>\n        </mat-form-field>\n        \n        <div *ngIf=\"compressorFormGroup.get('action').value === 'reset'\" class=\"warning-box\">\n            <div>\n                <strong>Warning:</strong> This will reset ALL compressor data to zero and restart timing.\n                <br><small>This action cannot be undone.</small>\n            </div>\n        </div>\n        \n        <div *ngIf=\"compressorFormGroup.get('action').value === 'modify'\">\n            <div class=\"time-inputs\">\n                <div class=\"time-field\">\n                    <mat-form-field>\n                        <mat-label>Hours</mat-label>\n                        <input type=\"number\" matInput formControlName=\"hours\" min=\"0\" max=\"8760\">\n                        <mat-error *ngIf=\"compressorFormGroup.get('hours').hasError('min')\">Cannot be negative</mat-error>\n                        <mat-error *ngIf=\"compressorFormGroup.get('hours').hasError('max')\">Max 8760 hours</mat-error>\n                    </mat-form-field>\n                    <span class=\"time-label\">h</span>\n                </div>\n                \n                <div class=\"time-field\">\n                    <mat-form-field>\n                        <mat-label>Minutes</mat-label>\n                        <input type=\"number\" matInput formControlName=\"minutes\" min=\"0\" max=\"59\">\n                        <mat-error *ngIf=\"compressorFormGroup.get('minutes').hasError('min')\">Cannot be negative</mat-error>\n                        <mat-error *ngIf=\"compressorFormGroup.get('minutes').hasError('max')\">Max 59 minutes</mat-error>\n                    </mat-form-field>\n                    <span class=\"time-label\">m</span>\n                </div>\n                \n                <div class=\"time-field\">\n                    <mat-form-field>\n                        <mat-label>Seconds</mat-label>\n                        <input type=\"number\" matInput formControlName=\"seconds\" min=\"0\" max=\"59\">\n                        <mat-error *ngIf=\"compressorFormGroup.get('seconds').hasError('min')\">Cannot be negative</mat-error>\n                        <mat-error *ngIf=\"compressorFormGroup.get('seconds').hasError('max')\">Max 59 seconds</mat-error>\n                    </mat-form-field>\n                    <span class=\"time-label\">s</span>\n                </div>\n            </div>\n            \n            <div class=\"info-box\">\n                <strong>Note:</strong> This adds buffer time to the display without affecting real-time calculations.\n            </div>\n        </div>\n    </div>\n    \n    <div mat-dialog-actions>\n        <button mat-button type=\"button\" (click)=\"cancel()\">Cancel</button>\n        <button mat-raised-button \n                [color]=\"compressorFormGroup.get('action').value === 'reset' ? 'warn' : 'primary'\"\n                type=\"submit\" \n                [disabled]=\"compressorForm.invalid\">\n            {{ compressorFormGroup.get('action').value === 'reset' ? 'Reset All' : 'Update Time' }}\n        </button>\n    </div>\n</form>",
+                "customCss" : ".compressor-form {\n    min-width: 400px;\n    max-width: 500px;\n}\n\n.compressor-form mat-dialog-content {\n    padding: 24px;\n}\n\n.compressor-form mat-dialog-actions {\n    padding: 16px 24px;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    gap: 16px;\n}\n\n.compressor-form mat-dialog-actions button:first-child {\n    margin-right: auto;\n}\n\n.mat-block {\n    width: 100%;\n}\n\n.flex-1 {\n    flex: 1;\n}\n\n.time-inputs {\n    display: flex;\n    gap: 12px;\n    align-items: flex-start;\n    margin: 16px 0;\n}\n\n.time-field {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n    flex: 1;\n}\n\n.time-field mat-form-field {\n    flex: 1;\n    min-width: 0;\n}\n\n.time-label {\n    font-weight: 500;\n    color: #666;\n    font-size: 14px;\n    margin-top: 8px;\n    min-width: 12px;\n}\n\n.warning-box {\n    background: #fff3cd;\n    border: 1px solid #ffeaa7;\n    border-radius: 4px;\n    padding: 16px;\n    margin: 16px 0;\n    display: flex;\n    align-items: flex-start;\n    gap: 12px;\n}\n\n.warning-box mat-icon {\n    color: #856404;\n    margin-top: 2px;\n}\n\n.info-box {\n    background: #e8f4fd;\n    border: 1px solid #bee5eb;\n    border-radius: 4px;\n    padding: 12px;\n    margin-top: 16px;\n    font-size: 14px;\n    color: #0c5460;\n}\n\n@media (max-width: 480px) {\n    .compressor-form {\n        min-width: 320px;\n    }\n    \n    .time-inputs {\n        flex-direction: column;\n        gap: 8px;\n    }\n    \n    .time-field {\n        width: 100%;\n    }\n    \n    .compressor-form mat-dialog-actions {\n        flex-direction: column;\n        gap: 8px;\n    }\n    \n    .compressor-form mat-dialog-actions button {\n        width: 100%;\n    }\n}",
+                "customFunction" : "const $injector = widgetContext.$scope.$injector;\nconst customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\n\nfunction createAlertModal(title, message) {\n    return `\n        <div>\n            <mat-toolbar color=\"primary\">\n                <h2>${title}</h2>\n                <span class=\"flex-1\"></span>\n                <button mat-icon-button (click)=\"close()\" type=\"button\">\n                    <mat-icon>close</mat-icon>\n                </button>\n            </mat-toolbar>\n            <div mat-dialog-content style=\"padding: 24px; text-align: center;\">\n                <div style=\"font-size: 16px; color: #333;\">${message}</div>\n            </div>\n            <div mat-dialog-actions style=\"padding: 16px 24px; justify-content: flex-end;\">\n                <button mat-raised-button color=\"primary\" (click)=\"close()\">OK</button>\n            </div>\n        </div>\n    `;\n}\n\nfunction AlertController(instance) {\n    const vm = instance;\n    vm.close = () => vm.dialogRef.close(null);\n}\n\nfunction showCustomAlert(title, message) {\n    customDialog.customDialog(createAlertModal(title, message), AlertController).subscribe();\n}\n\nfunction CompressorTimeDialogController(instance) {\n    const vm = instance;\n    \n    vm.compressorFormGroup = vm.fb.group({\n        action: ['modify'],\n        hours: [0, [vm.validators.min(0), vm.validators.max(8760)]],\n        minutes: [0, [vm.validators.min(0), vm.validators.max(59)]],\n        seconds: [0, [vm.validators.min(0), vm.validators.max(59)]]\n    });\n    \n    vm.actionOptions = [\n        { value: 'modify', label: 'Modify Initial Compressor Time' },\n        { value: 'reset', label: 'Reset All Times to Zero' }\n    ];\n    \n    vm.cancel = () => vm.dialogRef.close(null);\n    \n    vm.save = () => {\n        if (!vm.compressorFormGroup.valid) return;\n        \n        const formValues = vm.compressorFormGroup.value;\n        formValues.action === 'reset' ? resetAllTimes() : modifyInitialTime(formValues);\n    };\n    \n    function resetAllTimes() {\n        const attributes = [\n            { key: \"total_uptime_start\", value: Date.now().toString() },\n            { key: \"total_compressor_time\", value: \"0\" },\n            { key: \"initial_compressor_time\", value: \"0\" },\n            { key: \"session_start_time\", value: \"0\" },\n            { key: \"previous_state\", value: \"0\" },\n            { key: \"last_update_time\", value: \"0\" }\n        ];\n        saveAttributes(attributes, 'All times reset successfully!');\n    }\n    \n    function modifyInitialTime(formValues) {\n        const totalMs = (formValues.hours * 3600000) + \n                       (formValues.minutes * 60000) + \n                       (formValues.seconds * 1000);\n        const attributes = [{ key: \"initial_compressor_time\", value: totalMs.toString() }];\n        saveAttributes(attributes, 'Initial compressor time updated!');\n    }\n    \n    function saveAttributes(attributes, successMessage) {\n        widgetContext.attributeService.saveEntityAttributes(entityId, 'SHARED_SCOPE', attributes)\n            .subscribe({\n                next: () => {\n                    vm.dialogRef.close(null);\n                    showCustomAlert('Success', successMessage);\n                },\n                error: () => {\n                    showCustomAlert('Error', 'Operation failed');\n                }\n            });\n    }\n}\n\nfunction openCompressorTimeDialog() {\n    customDialog.customDialog(htmlTemplate, CompressorTimeDialogController).subscribe();\n}\n\nopenCompressorTimeDialog();",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "57c05a60-07b7-c763-995d-0d1add9ed819"
+              } ]
+            },
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "da9c1136-2350-9eb5-6ebb-0f9a74f97937"
+        },
+        "b35abeb0-1eb1-4e6e-c135-430d5be9aa96" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "defr",
+                "type" : "timeseries",
+                "label" : "defr",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.2873958380601337
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Defrost Status",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : null,
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b35abeb0-1eb1-4e6e-c135-430d5be9aa96"
+        },
+        "7c443b70-383d-fd1a-c90d-0edbcac88472" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "dig1",
+                "type" : "timeseries",
+                "label" : "dig1",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.5138880461649568
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Digital Input 1",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "7c443b70-383d-fd1a-c90d-0edbcac88472"
+        },
+        "668dc47b-81a7-b3d7-9334-5eb5ad5046bb" : {
+          "typeFullFqn" : "system.digital_gauges.simple_gauge_justgage",
+          "type" : "latest",
+          "sizeX" : 2,
+          "sizeY" : 2,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+              "dataKeys" : [ {
+                "name" : "dig2",
+                "type" : "timeseries",
+                "label" : "dig2",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.020907031027105893
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1748969318076,
+                  "endTimeMs" : 1749055718076
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "maxValue" : 1,
+              "minValue" : 0,
+              "donutStartAngle" : 90,
+              "showValue" : false,
+              "showMinMax" : true,
+              "gaugeWidthScale" : 0.75,
+              "levelColors" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+              "refreshAnimationType" : ">",
+              "refreshAnimationTime" : 700,
+              "startAnimationType" : ">",
+              "startAnimationTime" : 700,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#000000"
+              },
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "style" : "normal",
+                "weight" : "500",
+                "size" : 32,
+                "color" : "#000000"
+              },
+              "minMaxFont" : {
+                "family" : "Segment7Standard",
+                "size" : 12,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
+              "neonGlowBrightness" : 0,
+              "dashThickness" : 0,
+              "decimals" : 0,
+              "gaugeColor" : "#FF0000",
+              "gaugeType" : "arc",
+              "showTitle" : true,
+              "title" : "Digital Input 2",
+              "barColor" : {
+                "type" : "gradient",
+                "color" : "#2196f3",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgb(255, 0, 0)", "rgb(86, 255, 0)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 1
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "useFixedLevelColor" : false
+            },
+            "title" : "Simple gauge",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "configMode" : "basic",
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "actions" : { },
+            "enableDataExport" : false,
+            "borderRadius" : null,
+            "units" : "",
+            "decimals" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "668dc47b-81a7-b3d7-9334-5eb5ad5046bb"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Device Detail View 2",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "df13f681-83af-9bdb-d282-2ae1f18f9b30" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "5ba834fa-bf73-6a53-e5bf-9e2d807032ee" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 0,
+                  "col" : 8
+                },
+                "1448aa61-6ec9-3ea8-fd74-ae5900bcede2" : {
+                  "sizeX" : 8,
+                  "sizeY" : 1,
+                  "preserveAspectRatio" : false,
+                  "resizable" : true,
+                  "row" : 0,
+                  "col" : 16
+                },
+                "de5fc0de-b2ad-932b-efe2-8214b9fd58bf" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 0
+                },
+                "9ff792cc-7c55-022d-c496-825fedb0ff12" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 4,
+                  "col" : 8
+                },
+                "da9c1136-2350-9eb5-6ebb-0f9a74f97937" : {
+                  "sizeX" : 8,
+                  "sizeY" : 7,
+                  "preserveAspectRatio" : true,
+                  "resizable" : true,
+                  "row" : 1,
+                  "col" : 16
+                },
+                "b35abeb0-1eb1-4e6e-c135-430d5be9aa96" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 0
+                },
+                "7c443b70-383d-fd1a-c90d-0edbcac88472" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 8
+                },
+                "668dc47b-81a7-b3d7-9334-5eb5ad5046bb" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 16
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "40125ddf-8188-eb4c-afe4-281a39153f9c" : {
+          "id" : "40125ddf-8188-eb4c-afe4-281a39153f9c",
+          "alias" : "Selected Device",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : "entityId",
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "fec65880-6276-11f0-be4a-775fee303094"
+            }
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1752683153887,
+            "endTimeMs" : 1752769553887
+          },
+          "quickInterval" : "CURRENT_DAY",
+          "hideInterval" : false,
+          "hideLastInterval" : false,
+          "hideFixedInterval" : false,
+          "hideQuickInterval" : false
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "name" : "Device Detail View",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "1bf797c0-632b-11f0-8df3-99d9c8fcd8e7"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
