@@ -1,12 +1,12 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Device Detail View",
+    "title" : "Clickable Device View",
     "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
     "mobileHide" : true,
     "mobileOrder" : null,
     "configuration" : {
-      "description" : "Device Detail View",
+      "description" : "Clickable Device View",
       "widgets" : {
         "b053085e-3cf2-3ca3-089c-0dc1344f62ed" : {
           "typeFullFqn" : "system.cards.value_card",
@@ -994,7 +994,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Device Detail View",
+    "name" : "Clickable Device View",
     "resources" : null,
     "assignedCustomers" : null,
     "customerId" : null,
