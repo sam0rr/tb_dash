@@ -165,8 +165,8 @@
     }, {
       "additionalInfo" : {
         "description" : "Catches all non-POST_TELEMETRY_REQUEST messages",
-        "layoutX" : 336,
-        "layoutY" : 709
+        "layoutX" : 644,
+        "layoutY" : 594
       },
       "configuration" : {
         "scriptLang" : "JS",
