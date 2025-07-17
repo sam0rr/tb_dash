@@ -1489,7 +1489,21 @@
             "useDashboardTimewindow" : true,
             "showLegend" : false,
             "widgetStyle" : { },
-            "actions" : { },
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "RESET",
+                "buttonType" : "icon",
+                "icon" : "delete",
+                "buttonColor" : null,
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "// This sends an attribute update with total_accumulated_time = 0\nasync function($event, widgetContext, entityId, entityName, additionalParams, entityLabel) {\n    const attr = {\n        total_accumulated_time: \"0\",\n        session_start_time: \"0\",\n        previous_state: \"0\",\n        last_update_time: \"0\"\n    };\n\n    // Send attributes to device or asset\n    await widgetContext.attributeService.saveEntityAttributes(entityId, 'SHARED_SCOPE', attr);\n    \n    // Optional: show notification\n    widgetContext.showSuccessToast('Compressor time reset!');\n}\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "8b507a89-554c-a613-b1aa-09035db92b6b"
+              } ]
+            },
             "configMode" : "basic",
             "displayTimewindow" : true,
             "margin" : "0px",
