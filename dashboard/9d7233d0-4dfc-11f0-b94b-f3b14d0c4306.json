@@ -1492,11 +1492,11 @@
             "actions" : {
               "headerButton" : [ {
                 "name" : "RESET",
-                "buttonType" : "raised",
+                "buttonType" : "stroked",
                 "showIcon" : true,
                 "icon" : "delete",
-                "buttonColor" : "#ffffff",
-                "buttonFillColor" : "#FF0000",
+                "buttonColor" : "#FF0000",
+                "buttonBorderColor" : "#0000001F",
                 "useShowWidgetActionFunction" : null,
                 "showWidgetActionFunction" : "return true;",
                 "type" : "customPretty",
