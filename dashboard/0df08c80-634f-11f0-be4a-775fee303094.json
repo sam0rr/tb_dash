@@ -891,7 +891,7 @@
                 "95725b06-e4be-d941-92b7-ad8a619dd995" : {
                   "sizeX" : 8,
                   "sizeY" : 2,
-                  "preserveAspectRatio" : false,
+                  "preserveAspectRatio" : true,
                   "resizable" : true,
                   "row" : 0,
                   "col" : 16
@@ -899,7 +899,7 @@
                 "e87f037f-1607-b05b-4f75-aa8b63e8d00a" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "preserveAspectRatio" : false,
+                  "preserveAspectRatio" : true,
                   "resizable" : true,
                   "row" : 4,
                   "col" : 0
@@ -907,7 +907,7 @@
                 "71b156c3-efac-97fa-7de2-9ee7a79bfc43" : {
                   "sizeX" : 8,
                   "sizeY" : 7,
-                  "preserveAspectRatio" : true,
+                  "preserveAspectRatio" : false,
                   "resizable" : true,
                   "row" : 2,
                   "col" : 16
@@ -915,7 +915,7 @@
                 "3866c33c-3096-486d-41b7-331cbcc59cc2" : {
                   "sizeX" : 8,
                   "sizeY" : 5,
-                  "preserveAspectRatio" : false,
+                  "preserveAspectRatio" : true,
                   "resizable" : true,
                   "row" : 4,
                   "col" : 8
