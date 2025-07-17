@@ -40,13 +40,53 @@
       "fromIndex" : 1,
       "toIndex" : 4,
       "type" : "Failure"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 7,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 11,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 6,
+      "type" : "True"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 8,
+      "type" : "False"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 9,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 13,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 15,
+      "type" : "Failure"
     } ],
     "firstNodeIndex" : 1,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "Save Telemetry With Expiration",
-        "layoutX" : 689,
-        "layoutY" : 166
+        "layoutX" : 726,
+        "layoutY" : 332
       },
       "configuration" : {
         "processingSettings" : {
@@ -107,7 +147,7 @@
       "configuration" : {
         "scriptLang" : "JS",
         "jsScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n",
-        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+        "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -125,13 +165,13 @@
     }, {
       "additionalInfo" : {
         "description" : "Confirms the telemetry was saved with TTL",
-        "layoutX" : 904,
-        "layoutY" : 20
+        "layoutX" : 961,
+        "layoutY" : 231
       },
       "configuration" : {
         "scriptLang" : "JS",
         "jsScript" : "return \"Telemetry saved successfully for device: \" + metadata.deviceName;\n",
-        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+        "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -159,7 +199,7 @@
       "configuration" : {
         "scriptLang" : "JS",
         "jsScript" : "return \"Unknown or unsupported message type: \" + msgType;\n",
-        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+        "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -181,13 +221,13 @@
     }, {
       "additionalInfo" : {
         "description" : "Logs if saving telemetry fails due to TTL error, system issue, etc.",
-        "layoutX" : 903,
-        "layoutY" : 325
+        "layoutX" : 967,
+        "layoutY" : 430
       },
       "configuration" : {
         "scriptLang" : "JS",
         "jsScript" : "return \"Failed to save telemetry.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : "return \"Received POST_TELEMETRY_REQUEST for device: \" + metadata.deviceName;\n"
+        "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -202,6 +242,278 @@
         "id" : "e7c14310-629f-11f0-bf97-f3b14d0c4306"
       },
       "name" : "Log telemetry save failed",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Duration calculation attributes",
+        "layoutX" : 1007,
+        "layoutY" : 834
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : false,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : [ "accumulated_compressor_time", "last_refr_state", "last_refr_on_start_ts" ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d3430-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Duration calculation attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "catch_refr",
+        "layoutX" : 719,
+        "layoutY" : 837
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "function catch_refr(metadata, msg) {\nif (msgType === 'POST_TELEMETRY_REQUEST' && Object.hasOwn(msg, 'refr')) {\n    return true;\n}\nreturn false;\n}\n\nreturn catch_refr(metadata, msg);",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d3431-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "catch_refr",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Tells refr was not present in the payload",
+        "layoutX" : 889,
+        "layoutY" : 670
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"No refr in payload.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b40-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Tells refr was not present in the payload",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Tells refr was not present in the payload (FAILURE)",
+        "layoutX" : 899,
+        "layoutY" : 987
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"No refr in payload (FAILURE).\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b41-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Tells refr was not present in the payload (FAILURE)",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Process refr duration",
+        "layoutX" : 1323,
+        "layoutY" : 836
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var state    = Number(msg.refr);\nvar prevState= Number(metadata.last_refr_state) || 0;\nvar prevTs   = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum    = Number(metadata.accumulated_compressor_time) || 0;\nvar now      = Number(metadata.ts);\n\nif (state !== prevState) {\n    if (prevState === 1) {\n        accum += (now - prevTs);\n        prevTs = 0;\n    }\n\n    if (state === 1) {\n        prevTs = now;\n    }\n\n    prevState = state;\n}\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts       = prevTs.toString();\nmsg.last_refr_state             = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b42-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Process refr duration",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Originator attributes failed to fetch",
+        "layoutX" : 1196,
+        "layoutY" : 994
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Originator attributes failed to fetch .\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b43-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Originator attributes failed to fetch",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Save Duration Attributes",
+        "layoutX" : 1641,
+        "layoutY" : 838
+      },
+      "configuration" : {
+        "processingSettings" : {
+          "type" : "ON_EVERY_MESSAGE"
+        },
+        "scope" : "SHARED_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
+      },
+      "configurationVersion" : 3,
+      "createdTime" : 0,
+      "debugSettings" : null,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b44-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Save Duration Attributes",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Duration attributes failed to transform",
+        "layoutX" : 1509,
+        "layoutY" : 996
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Transformation of duration attributes failed.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d5b45-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Duration attributes failed to transform",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log shared attributes saved",
+        "layoutX" : 1898,
+        "layoutY" : 747
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Shared attributes saved successfully for device: \" + metadata.deviceName;\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d8250-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Log shared attributes saved",
+      "queueName" : null,
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "Log shared attributes save failed",
+        "layoutX" : 1904,
+        "layoutY" : 946
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return \"Failed to save shared attributes.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
+        "tbelScript" : ""
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugSettings" : {
+        "allEnabled" : false,
+        "allEnabledUntil" : 0,
+        "failuresEnabled" : false
+      },
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "136d8251-62b2-11f0-bf97-f3b14d0c4306"
+      },
+      "name" : "Log shared attributes save failed",
       "queueName" : null,
       "ruleChainId" : null,
       "singletonMode" : false,
