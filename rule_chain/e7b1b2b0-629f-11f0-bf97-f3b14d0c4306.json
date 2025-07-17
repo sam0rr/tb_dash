@@ -2,7 +2,7 @@
   "entityType" : "RULE_CHAIN",
   "entity" : {
     "additionalInfo" : {
-      "description" : "apply_lifetime to all devices (tls) -> root rule chain"
+      "description" : "root rule chain to apply lifetime and calculate compressor stats"
     },
     "configuration" : null,
     "debugMode" : true,
@@ -15,7 +15,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "e7b1b2b0-629f-11f0-bf97-f3b14d0c4306"
     },
-    "name" : "apply_lifetime",
+    "name" : "base_rule_chain",
     "root" : true,
     "type" : "CORE"
   },
