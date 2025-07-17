@@ -342,14 +342,14 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var state = Number(msg.refr);\nvar prevState = Number(metadata.last_refr_state) || 0;\nvar prevTs = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum = Number(metadata.accumulated_compressor_time) || 0;\nvar now = Number(metadata.ts);\n\nif (prevState === 1 && prevTs > 0) {\n    accum += (now - prevTs);\n}\n\nprevTs = state === 1 ? now : 0;\n\nprevState = state;\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts = prevTs.toString();\nmsg.last_refr_state = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST' };",
+        "jsScript" : "var state = Number(msg.refr);\nvar prevState = Number(metadata.last_refr_state) || 0;\nvar prevTs = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum = Number(metadata.accumulated_compressor_time) || 0;\nvar now = Number(metadata.ts);\n\nif (state === 1 && prevTs > 0) {\n    accum += (now - prevTs);\n}\n\nprevTs = state === 1 ? now : 0;\nprevState = state;\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts = prevTs.toString();\nmsg.last_refr_state = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST' };",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1752720304099,
+        "allEnabledUntil" : 1752721546404,
         "failuresEnabled" : false
       },
       "externalId" : null,
