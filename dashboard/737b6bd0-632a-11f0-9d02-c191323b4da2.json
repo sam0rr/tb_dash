@@ -1526,8 +1526,11 @@
           "filter" : {
             "type" : "stateEntity",
             "resolveMultiple" : false,
-            "stateEntityParamName" : "",
-            "defaultStateEntity" : null
+            "stateEntityParamName" : "entityId",
+            "defaultStateEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "e5e53830-60bf-11f0-9d02-c191323b4da2"
+            }
           }
         }
       },
