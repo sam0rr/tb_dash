@@ -3,7 +3,7 @@
   "entity" : {
     "title" : "Device Detail View",
     "image" : "tb-image;/api/images/tenant/REGE-logo-48px.png",
-    "mobileHide" : false,
+    "mobileHide" : true,
     "mobileOrder" : null,
     "configuration" : {
       "description" : "Device Detail View",
