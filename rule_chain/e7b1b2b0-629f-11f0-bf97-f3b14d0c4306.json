@@ -342,14 +342,14 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "var state    = Number(msg.refr);\nvar prevState= Number(metadata.last_refr_state) || 0;\nvar prevTs   = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum    = Number(metadata.accumulated_compressor_time) || 0;\nvar now      = Number(metadata.ts);\n\nif (state !== prevState) {\n    if (prevState === 1) {\n        accum += (now - prevTs);\n        prevTs = 0;\n    }\n\n    if (state === 1) {\n        prevTs = now;\n    }\n\n    prevState = state;\n}\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts       = prevTs.toString();\nmsg.last_refr_state             = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST' };\n",
+        "jsScript" : "var state = Number(msg.refr);\nvar prevState = Number(metadata.last_refr_state) || 0;\nvar prevTs = Number(metadata.last_refr_on_start_ts) || 0;\nvar accum = Number(metadata.accumulated_compressor_time) || 0;\nvar now = Number(metadata.ts);\n\n// Debug logging\nvar debugMsg = \"DEBUG: state=\" + state + \", prevState=\" + prevState + \", prevTs=\" + prevTs + \", accum=\" + accum + \", now=\" + now;\n\nif (state !== prevState) {\n    debugMsg += \" | STATE CHANGED!\";\n    if (prevState === 1) {\n        var duration = now - prevTs;\n        accum += duration;\n        debugMsg += \" | ACCUMULATING: \" + duration + \"ms, new accum=\" + accum;\n        prevTs = 0;\n    }\n    if (state === 1) {\n        prevTs = now;\n        debugMsg += \" | COMPRESSOR STARTED at \" + now;\n    }\n    prevState = state;\n} else {\n    debugMsg += \" | NO STATE CHANGE\";\n}\n\n// Log the debug message\n// (You can add a log node after this or use console.log if available)\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.debug_info = debugMsg; // Add this temporarily to see what's happening\nmsg.accumulated_compressor_time = accum.toString();\nmsg.last_refr_on_start_ts = prevTs.toString();\nmsg.last_refr_state = prevState.toString();\n\nreturn { msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST' };",
         "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
       "debugSettings" : {
         "allEnabled" : false,
-        "allEnabledUntil" : 1752718955607,
+        "allEnabledUntil" : 1752720304099,
         "failuresEnabled" : false
       },
       "externalId" : null,
