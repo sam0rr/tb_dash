@@ -303,7 +303,7 @@
                   "blur" : 3
                 }
               },
-              "autoScale" : false,
+              "autoScale" : true,
               "padding" : ""
             },
             "title" : "Value card",
@@ -505,7 +505,7 @@
                   "blur" : 3
                 }
               },
-              "autoScale" : false,
+              "autoScale" : true,
               "padding" : ""
             },
             "title" : "Value card",
@@ -1324,6 +1324,276 @@
           "row" : 0,
           "col" : 0,
           "id" : "c5ec0369-97b1-1821-b8e5-a5a597e217ef"
+        },
+        "c318c79a-423c-d6d8-9e90-3f18bfd9f5f7" : {
+          "typeFullFqn" : "system.cards.value_card",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8",
+              "dataKeys" : [ {
+                "name" : "total_accumulated_time",
+                "type" : "attribute",
+                "label" : "Compressor Total Up Time",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.18193456902246774,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "var totalMs = value;\nvar hours = Math.floor(totalMs / 3600000);\nvar minutes = Math.floor((totalMs % 3600000) / 60000);\nvar seconds = Math.floor((totalMs % 60000) / 1000);\n\nif (hours > 0) {\n    return hours + \"h \" + minutes + \"m \" + seconds + \"s\";\n} else if (minutes > 0) {\n    return minutes + \"m \" + seconds + \"s\";\n} else {\n    return seconds + \"s\";\n}"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1752636238226,
+                  "endTimeMs" : 1752722638226
+                },
+                "quickInterval" : "CURRENT_DAY",
+                "hideInterval" : false,
+                "hideLastInterval" : false,
+                "hideFixedInterval" : false,
+                "hideQuickInterval" : false
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(0, 0, 0, 0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "labelPosition" : "top",
+              "layout" : "centered",
+              "showLabel" : true,
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 16,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "labelColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showIcon" : true,
+              "iconSize" : 40,
+              "iconSizeUnit" : "px",
+              "icon" : "query_builder",
+              "iconColor" : {
+                "type" : "constant",
+                "color" : "#FF5454",
+                "gradient" : {
+                  "advancedMode" : false,
+                  "gradient" : [ "rgba(0, 255, 0, 1)", "rgba(255, 0, 0, 1)" ],
+                  "gradientAdvanced" : [ {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(0, 255, 0, 1)"
+                  }, {
+                    "source" : {
+                      "type" : "constant"
+                    },
+                    "color" : "rgba(255, 0, 0, 1)"
+                  } ],
+                  "minValue" : 0,
+                  "maxValue" : 100
+                },
+                "rangeList" : {
+                  "advancedMode" : false,
+                  "range" : [ ],
+                  "rangeAdvanced" : [ ]
+                },
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "valueFont" : {
+                "family" : "Roboto",
+                "size" : 52,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "valueColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.87)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "showDate" : true,
+              "dateFormat" : {
+                "format" : null,
+                "lastUpdateAgo" : true,
+                "custom" : false
+              },
+              "dateFont" : {
+                "family" : "Roboto",
+                "size" : 12,
+                "sizeUnit" : "px",
+                "style" : "normal",
+                "weight" : "500"
+              },
+              "dateColor" : {
+                "type" : "constant",
+                "color" : "rgba(0, 0, 0, 0.38)",
+                "colorFunction" : "var temperature = value;\nif (typeof temperature !== undefined) {\n  var percent = (temperature + 60)/120 * 100;\n  return tinycolor.mix('blue', 'red', percent).toHexString();\n}\nreturn 'blue';"
+              },
+              "background" : {
+                "type" : "color",
+                "color" : "#fff",
+                "overlay" : {
+                  "enabled" : false,
+                  "color" : "rgba(255,255,255,0.72)",
+                  "blur" : 3
+                }
+              },
+              "autoScale" : true,
+              "padding" : ""
+            },
+            "title" : "Value card",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "units" : null,
+            "decimals" : null,
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : { },
+            "actions" : { },
+            "configMode" : "basic",
+            "displayTimewindow" : true,
+            "margin" : "0px",
+            "borderRadius" : "0px",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "enableDataExport" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "titleFont" : {
+              "size" : 12,
+              "sizeUnit" : "px",
+              "family" : null,
+              "weight" : null,
+              "style" : null,
+              "lineHeight" : "1.6"
+            },
+            "titleIcon" : "",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "14px",
+            "timewindowStyle" : {
+              "showIcon" : true,
+              "iconSize" : "14px",
+              "icon" : "query_builder",
+              "iconPosition" : "left",
+              "font" : {
+                "size" : 12,
+                "sizeUnit" : "px",
+                "family" : null,
+                "weight" : null,
+                "style" : null,
+                "lineHeight" : "1"
+              },
+              "color" : null
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c318c79a-423c-d6d8-9e90-3f18bfd9f5f7"
+        },
+        "5bf9ddc7-7382-a3a6-7a10-b3cea24de20c" : {
+          "typeFullFqn" : "system.control_widgets.rpc_debug_terminal",
+          "type" : "rpc",
+          "sizeX" : 9.5,
+          "sizeY" : 5.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : true,
+            "backgroundColor" : "#010101",
+            "color" : "rgba(255, 254, 254, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "parseGpioStatusFunction" : "return body[pin] === true;",
+              "gpioStatusChangeRequest" : {
+                "method" : "setGpioStatus",
+                "paramsBody" : "{\n   \"pin\": \"{$pin}\",\n   \"enabled\": \"{$enabled}\"\n}"
+              },
+              "requestTimeout" : 500,
+              "switchPanelBackgroundColor" : "#b71c1c",
+              "gpioStatusRequest" : {
+                "method" : "getGpioStatus",
+                "paramsBody" : "{}"
+              },
+              "gpioList" : [ {
+                "pin" : 1,
+                "label" : "GPIO 1",
+                "row" : 0,
+                "col" : 0,
+                "_uniqueKey" : 0
+              }, {
+                "pin" : 2,
+                "label" : "GPIO 2",
+                "row" : 0,
+                "col" : 1,
+                "_uniqueKey" : 1
+              }, {
+                "pin" : 3,
+                "label" : "GPIO 3",
+                "row" : 1,
+                "col" : 0,
+                "_uniqueKey" : 2
+              } ]
+            },
+            "title" : "RPC debug terminal",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "datasources" : [ ],
+            "targetDevice" : {
+              "type" : "entity",
+              "entityAliasId" : "281fb906-da5b-bd10-eab7-8528743e71e8"
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "5bf9ddc7-7382-a3a6-7a10-b3cea24de20c"
         }
       },
       "states" : {
@@ -1382,6 +1652,18 @@
                   "sizeY" : 4,
                   "row" : 4,
                   "col" : 16
+                },
+                "c318c79a-423c-d6d8-9e90-3f18bfd9f5f7" : {
+                  "sizeX" : 8,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 16
+                },
+                "5bf9ddc7-7382-a3a6-7a10-b3cea24de20c" : {
+                  "sizeX" : 9,
+                  "sizeY" : 5,
+                  "row" : 12,
+                  "col" : 0
                 }
               },
               "gridSettings" : {
