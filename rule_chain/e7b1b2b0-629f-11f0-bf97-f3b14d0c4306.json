@@ -257,9 +257,9 @@
         "layoutY" : 837
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "function catch_refr(metadata, msg) {\nif (msgType === 'POST_TELEMETRY_REQUEST' && Object.hasOwn(msg, 'refr')) {\n    return true;\n}\nreturn false;\n}\n\nreturn catch_refr(metadata, msg);",
-        "tbelScript" : "function catch_refr(metadata, msg) {\nif (msgType === 'POST_TELEMETRY_REQUEST' && Object.hasOwn(msg, 'refr')) {\n    return true;\n}\nreturn false;\n}\n\nreturn catch_refr(metadata, msg);"
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "var isTelemetry = msgType == 'POST_TELEMETRY_REQUEST';\nvar hasRefr     = msg.refr != null;\n\nreturn isTelemetry && hasRefr;\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -341,9 +341,9 @@
         "layoutY" : 836
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "var totalUptimeStart = Number(metadata.shared_total_uptime_start) || 0;\nvar totalCompressorTime = Number(metadata.shared_total_compressor_time) || 0;\nvar initialCompressorTime = Number(metadata.shared_initial_compressor_time) || 0;\nvar sessionStartTime = Number(metadata.shared_session_start_time) || 0;\nvar previousState = Number(metadata.shared_previous_state) || 0;\nvar lastUpdateTime = Number(metadata.shared_last_update_time) || 0;\nvar currentState = Number(msg.refr);\nvar currentTime = Number(metadata.ts);\n\nif (totalUptimeStart === 0) {\n    totalUptimeStart = currentTime;\n}\n\nif (previousState === 1 && lastUpdateTime > 0) {\n    totalCompressorTime += (currentTime - lastUpdateTime);\n}\n\nvar newSessionStartTime = (previousState === 0 && currentState === 1)\n    ? currentTime\n    : (currentState === 1 ? sessionStartTime : 0);\n\nfor (var key in msg) {\n    delete msg[key];\n}\n\nmsg.total_uptime_start = totalUptimeStart.toString();\nmsg.total_compressor_time = totalCompressorTime.toString();\nmsg.initial_compressor_time = initialCompressorTime.toString();\nmsg.session_start_time = newSessionStartTime.toString();\nmsg.previous_state = currentState.toString();\nmsg.last_update_time = currentTime.toString();\n\nreturn {\n    msg: msg,\n    metadata: metadata,\n    msgType: 'POST_ATTRIBUTES_REQUEST'\n};",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "var totalUptimeStart      = metadata.shared_total_uptime_start        != null \n    ? parseLong(metadata.shared_total_uptime_start)  \n    : 0;\nvar totalCompressorTime   = metadata.shared_total_compressor_time     != null \n    ? parseLong(metadata.shared_total_compressor_time) \n    : 0;\nvar initialCompressorTime = metadata.shared_initial_compressor_time   != null \n    ? parseLong(metadata.shared_initial_compressor_time) \n    : 0;\nvar sessionStartTime      = metadata.shared_session_start_time        != null \n    ? parseLong(metadata.shared_session_start_time)   \n    : 0;\nvar previousState         = metadata.shared_previous_state            != null \n    ? parseLong(metadata.shared_previous_state)       \n    : 0;\nvar lastUpdateTime        = metadata.shared_last_update_time          != null \n    ? parseLong(metadata.shared_last_update_time)     \n    : 0;\nvar currentState          = msg.refr                                  != null \n    ? parseLong(msg.refr) \n    : 0;\nvar currentTime           = metadata.ts                               != null \n    ? parseLong(metadata.ts)   \n    : 0;\n\nif (totalUptimeStart == 0) {\n    totalUptimeStart = currentTime;\n}\n\nif (previousState == 1 && lastUpdateTime > 0) {\n    totalCompressorTime = totalCompressorTime + (currentTime - lastUpdateTime);\n}\n\nvar newSessionStartTime = (previousState == 0 && currentState == 1)\n    ? currentTime\n    : (currentState == 1 ? sessionStartTime : 0);\n\nreturn {\n    msg: {\n        total_uptime_start:      totalUptimeStart      + \"\",\n        total_compressor_time:   totalCompressorTime   + \"\",\n        initial_compressor_time: initialCompressorTime + \"\",\n        session_start_time:      newSessionStartTime   + \"\",\n        previous_state:          currentState          + \"\",\n        last_update_time:        currentTime           + \"\"\n    },\n    metadata: metadata,\n    msgType: 'POST_ATTRIBUTES_REQUEST'\n};\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
