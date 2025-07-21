@@ -259,7 +259,7 @@
       "configuration" : {
         "scriptLang" : "JS",
         "jsScript" : "function catch_refr(metadata, msg) {\nif (msgType === 'POST_TELEMETRY_REQUEST' && Object.hasOwn(msg, 'refr')) {\n    return true;\n}\nreturn false;\n}\n\nreturn catch_refr(metadata, msg);",
-        "tbelScript" : ""
+        "tbelScript" : "function catch_refr(metadata, msg) {\nif (msgType === 'POST_TELEMETRY_REQUEST' && Object.hasOwn(msg, 'refr')) {\n    return true;\n}\nreturn false;\n}\n\nreturn catch_refr(metadata, msg);"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -457,9 +457,9 @@
         "layoutY" : 747
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Shared attributes saved successfully for device: \" + metadata.deviceName;\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Shared attributes saved successfully for device: \" + metadata.deviceName;\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -485,9 +485,9 @@
         "layoutY" : 946
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Failed to save shared attributes.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Failed to save shared attributes.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + msg.toString();;\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
