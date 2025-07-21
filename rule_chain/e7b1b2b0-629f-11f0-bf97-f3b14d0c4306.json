@@ -141,9 +141,9 @@
         "layoutY" : 231
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Telemetry saved successfully for device: \" + metadata.deviceName;\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Telemetry saved successfully for device: \" + metadata.deviceName;\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -169,9 +169,9 @@
         "layoutY" : 594
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Unknown or unsupported message type: \" + msgType;\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Unknown or unsupported message type: \" + msgType;\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -197,9 +197,9 @@
         "layoutY" : 430
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Failed to save telemetry.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Failed to save telemetry.\\nDevice: \" + metadata.deviceName +\n\"\\nMessage:\\n\" + msg.toString();\n\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -285,9 +285,9 @@
         "layoutY" : 670
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"No refr in payload.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"No refr in payload.\\nDevice: \" + metadata.deviceName +\n\"\\nMessage:\\n\" + msg.toString();\n\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -313,9 +313,9 @@
         "layoutY" : 987
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"No refr in payload (FAILURE).\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"No refr in payload (FAILURE).\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + msg.toString();\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -369,9 +369,9 @@
         "layoutY" : 994
       },
       "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return \"Originator attributes failed to fetch .\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "scriptLang" : "TBEL",
+        "jsScript" : "",
+        "tbelScript" : "return \"Originator attributes failed to fetch .\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + msg.toString();\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -429,9 +429,9 @@
         "layoutY" : 996
       },
       "configuration" : {
-        "scriptLang" : "JS",
+        "scriptLang" : "TBEL",
         "jsScript" : "return \"Transformation of duration attributes failed.\\nDevice: \" + metadata.deviceName +\n       \"\\nMessage:\\n\" + JSON.stringify(msg, null, 2);\n",
-        "tbelScript" : ""
+        "tbelScript" : "return \"Transformation of duration attributes failed.\\nDevice: \" + metadata.deviceName + \"\\nMessage:\\n\" + msg.toString();\n"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
